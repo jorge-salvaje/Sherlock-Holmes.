@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados de Búsqueda</title>
+  <style>
+    body {
+      background: #1a1c19;
+      color: white;
+      font-family: Josefin Sans, sans-serif;
+      padding: 20px;
+    }
+    .resultado {
+      font-size: 1.7rem;
+      margin: 10px 0;
+      border-bottom: 1px solid #fff;
+    }
+    a {
+      color: #f3eb07;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+<a style="font-size: 3rem;color:#f3eb07;text-align: end;" href="SHERLOCK HOLMES.HTML">⬅︎VOLVER</a>
+  <h1>RESULTADOS</h1>
+  <div id="resultados"></div>
+
+
+
+
+  <script>
+    function obtenerParametro(nombre) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(nombre);
+    }
+
+    const termino = obtenerParametro("q");
+    const resultados = document.getElementById("resultados");
+
+    const datos = [
+      { texto: "Estudio en escarlata", link: "LIBROS.html#1" },
+      { texto: "El signo de los cuatro", link: "LIBROS.html#2" },
+    { texto: "El sabueso de los Baskerville", link: "LIBROS.html#3" },
+      { texto: "El valle del terror", link: "LIBROS.html#4" },
+      { texto: "Un escandalo en Bohemia", link: "LIBROS.html#5" },
+      { texto: "La liga de los pelirrojos", link: "LIBROS.html#6" },
+            { texto: "El cliente ilustre", link: "LIBROS.html#7" },
+      { texto: "Los 6 napoleones", link: "LIBROS.html#8" },
+    { texto: "El constructor de norwood", link: "LIBROS.html#9" },
+      { texto: "El detective moribundo", link: "LIBROS.html#10" },
+      { texto: "El carbunclo azul", link: "LIBROS.html#11" },
+      { texto: "La aventura de Copper beeches", link: "LIBROS.html#12" },
+        { texto: "El intérprete griego", link: "LIBROS.html#13" },
+        { texto: "La banda de lunares", link: "LIBROS.html#14" },
+      { texto: "La caja de carton", link: "LIBROS.html#15" },
+    { texto: "El hombre del labio torcido", link: "LIBROS.html#16" },
+      { texto: "El escudero de reigate", link: "LIBROS.html#17" },
+      { texto: "El pie de diablo", link: "LIBROS.html#18" },
+      { texto: "Los planos de Bruce-partington", link: "LIBROS.html#19" },
+        { texto: "El problema del puente thor", link: "LIBROS.html#20" },
+      { texto: "La aventura de la melena del león", link: "LIBROS.html#21" },
+      { texto: "La piedra de Mazarino", link: "LIBROS.html#22" },
+      { texto: "La aventura del problema final", link: "LIBROS.html#23" },
+         { texto: "Sherlock Holmes", link: "PERSONAJES.html#personajeSH" },
+      { texto: "John H. Watson", link: "PERSONAJES.html#personajeJHW" },
+      { texto: "Inspector Lestrade", link: "PERSONAJES.html#personajeIL" },
+      { texto: "Mary Morstan", link: "PERSONAJES.html#personajeMM" },
+      { texto: "Irene Adler", link: "PERSONAJES.html#personajeIA" },
+      { texto: "Mycroft Holmes", link: "PERSONAJES.html#personajeMH" },
+    { texto: "Sebastian Moran", link: "PERSONAJES.html#personajeSM" },
+     { texto: "James Moriarty", link: "PERSONAJES.html#personajeJJM" },
+
+
+
+
+
+
+    ];
+
+    if (termino) {
+      const encontrados = datos.filter(d =>
+        d.texto.toLowerCase().includes(termino.toLowerCase())
+      );
+
+      if (encontrados.length > 0) {
+        resultados.innerHTML = encontrados
+          .map(d => `<div class="resultado"><a href="${d.link}">${d.texto}</a></div>`)
+          .join("");
+      } else {
+        resultados.innerHTML = `<p>No se encontraron resultados para "<strong>${termino}</strong>".</p>`;
+      }
+    } else {
+      resultados.innerHTML = "<p>No escribiste nada para buscar.</p>";
+    }
+  </script>
+</body>
+</html>
