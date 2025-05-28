@@ -1,0 +1,326 @@
+<html>
+<head>
+
+<style>
+
+body {
+margin:0;
+}
+
+#titulo{
+color:#f3eb07;
+font-size:4.5rem;
+font-weight:bolder;
+font-family:Cal Sans, Sans-serif;
+text-align:center;
+padding-top: 30px;
+padding-bottom: 30px;
+background-color:#191970;
+margin:0;
+}
+#categorias{
+color:#d1a577;
+font-weight:bolder;
+font-family:Oswald, Sans-Serif;
+font-size:3rem;
+column-count:5;
+list-style: none;
+text-align:center;
+background-color:#191970;
+column-rule:8px solid black;
+margin: 0;
+padding: 0;
+text-decoration: none;
+column-gap: 9px;
+border-top: 8px solid black;
+border-bottom: 8px solid black;
+}
+
+#tx_abajo{
+vertical-align: bottom;
+color:#8012b3;
+font-family:Cal Sans, Sans-serif;
+font-size:2rem;
+font-weight:bolder;
+margin:0;
+padding:20;
+background-color:#1a1c19;
+border-color:#4322da;
+border-style:solid;
+border-width:8px;
+column-count:2;
+list-style: none;
+text-align:center;
+padding:20px;
+}
+
+#descripcion{
+font-size:1.77rem;
+font-family:Josefin Sans, Sans-serif;
+font-weight:600;
+color:#ede8d0;
+background-color:#1253e0d0;
+margin:0;
+padding:20px;
+}
+
+#relleno{
+margin:0;
+background-color:#1a1916;
+font-size:5rem;
+color:#efeb06;
+text-align:center;
+}
+
+a {
+color:#d1a577;
+font-weight:bolder;
+font-family:Oswald, Sans-Serif;
+font-size:3rem;
+text-decoration: none;
+display: block;
+width: 100%;
+}
+
+a:hover{
+    transition: .5s;
+background-color:#f3eb07;
+color:#271f1f;
+}
+
+a span{
+display:inline-block;
+transition: transform 0.3s ease-in-out;
+width: 100%;
+}
+
+a span:hover{
+transform: translateY(-5px);
+
+}
+
+#mensaje-inicial{
+   position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      box-sizing: border-box;
+      z-index: 9999;
+      overflow: auto;
+      transition: opacity 1s ease;
+      font-family: Josefin Sans, serif;
+      background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+    }
+
+
+
+#mensaje-inicial.oculto{
+opacity: 0;
+pointer-events: none;
+}
+
+.contenido-mensaje {
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: Georgia, serif;
+  border: 10px solid #111;
+}
+
+.buscar {
+cursor: pointer;
+color:#d1a577;
+font-weight:bolder;
+font-family:Oswald, Sans-Serif;
+font-size:3rem;
+text-decoration: none;
+display: block;
+width: 100%;
+background-color:#191970;
+border: none;
+}
+
+.buscar:hover{
+    transition: .5s;
+background-color:#f3eb07;
+color:#271f1f;
+}
+
+.buscar span{
+display:inline-block;
+transition: transform 0.3s ease-in-out;
+width: 100%;
+}
+
+.buscar span:hover{
+transform: translateY(-5px);
+
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal-contenido {
+  background-color: #191970;
+  margin: 15% auto;
+  padding: 30px;
+  border: 4px solid #f3eb07;
+  width: 60%;
+  text-align: center;
+  color: white;
+  border-radius: 12px;
+}
+
+.cerrar {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1 id="titulo"> SHERLOCK HOLMES.COM </h1>
+<div id="categorias">
+<li><button class="buscar" onclick="abrirBuscador()" >BUSCAR</span></li>
+<li><a href="personajes.html"><span>PERSONAJES</span></a></li>
+<li><a href="libros.html"><span>LIBROS</span></a></li>
+<li><a href="adaptaciones.html"><span>ADAPTACIONES</span></a></li>
+<li><a href="biografia.html"><span>BIOGRAFÍA</span></a></li>
+</div>
+
+<div id="ventana-buscador" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarBuscador()">&times;</span>
+    <input type="text" id="buscador" placeholder="Buscar..." style="font-size:1.5rem; padding:10px; width:80%;">
+    <button onclick="buscar()" style="font-size:1.5rem; padding:10px; background:#f3eb07; font-weight:bold; cursor:pointer;">Ir</button>
+  </div>
+</div>
+
+
+
+<div style="filter: blur(3px);">
+<img src="gif pagina principal/sherlock.gif"width="100%"/>
+</div>
+<audio id="Musica" loop>
+  <source src="gameison.mp3" type="audio/mpeg" />
+  Tu navegador no soporta audio HTML5.
+</audio>
+
+<div id="tx_abajo">
+<li>¡BIENVENIDO A SHERLOCK HOLMES!</li>
+<button id="boton"><li><img src="gif pagina principal/music.png" width="100" height="90"></li></button>
+</div>
+<div id="mensaje-inicial">
+  <div class="contenido-mensaje">
+<p id="relleno">♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ </p>        
+<p id="descripcion">Bienvenidos a Sherlock holmes, el proposito de esta página es reunir o juntar todo el mundo de este peculiar detective llamado "Sherlock Holmes", junto a su leal compañero "Jhon H. Watson", en las miles de aventuras que tuvieron, creada por el escritor "Sir Arthur Conan Doyle".</p>
+
+<p id="descripcion"> Esta página es un tipo de <b>"wiki" sobre Sherlock Holmes</b>. La página consta de <b>5 encabezados</b>, <b>el primero</b> es para buscar cualquier elemento relacionado con la página (ej:libros,peliculas o personajes), por si se quiere buscar algo directamente. <b>La segunda</b> es sobre los personajes principales que aparecen en las obras, <b> la tercera </b> es sobre los libros de Sherlock Holmes (Incluyendo novelas y relatos cortos), <b>la cuarta</b> es sobre las adaptaciones de Sherlock (incluyendo series y peliculas), <b> la ultima </b> es sobre la biografia del creador de este famoso personaje, Ser Arthur Conan Doyle.</p>
+
+<p id="descripcion">Espero que disfruten la página ;)</p>
+
+<p id="relleno">♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ ♠︎ </p>
+</div>
+</div>
+<script>
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const mensaje = document.getElementById('mensaje-inicial');
+
+    if (sessionStorage.getItem('mensajeMostrado') === 'true') {
+      mensaje.style.display = 'none'; 
+    } else {
+      
+      setTimeout(() => {
+        mensaje.classList.add('oculto');
+
+     
+        sessionStorage.setItem('mensajeMostrado', 'true');
+
+        
+      }, 5000); 
+    }
+  });
+</script>
+
+
+
+<script>
+
+  const musica = document.getElementById('Musica');
+  const boton = document.getElementById('boton');
+
+  boton.addEventListener('click', () => {
+    if (musica.paused) {
+      musica.play();
+    } else {
+      musica.pause();
+    }
+  });
+</script>
+
+<script>
+function buscar() {
+  const query = document.getElementById("buscador").value.trim();
+  if (query !== "") {
+    window.location.href = `resultados.html?q=${encodeURIComponent(query)}`;
+  }
+}
+</script>
+
+<script>
+function abrirBuscador() {
+  document.getElementById("ventana-buscador").style.display = "block";
+}
+
+function cerrarBuscador() {
+  document.getElementById("ventana-buscador").style.display = "none";
+}
+
+function buscar() {
+  const query = document.getElementById("buscador").value.trim();
+  if (query !== "") {
+    window.location.href = `resultados.html?q=${encodeURIComponent(query)}`;
+  }
+}
+
+
+window.onclick = function(event) {
+  const modal = document.getElementById("ventana-buscador");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+
+</html>
