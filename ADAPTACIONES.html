@@ -1,0 +1,1657 @@
+<html>
+<head>
+
+
+<title>ADAPTACIONES</title>
+<style>
+
+
+body{
+margin: 0;
+}
+
+.wikitable {
+  border-collapse: collapse; 
+  width: 100%; 
+  margin: 0.5em 0; 
+  background-color: #fff; 
+  border: 1px solid #aaa; 
+}
+
+.wikitable th, .wikitable td {
+  border: 3px solid #545657; 
+  padding: 0.4em; 
+  text-align: left; 
+}
+
+.wikitable th {
+  background-color: #aceefb; 
+  font-weight: bold
+}
+
+
+#titulo{
+font-family: Cal Sans;
+font-size: 4rem;
+text-align: center;
+background-color: #447c2d;
+padding: 20px;
+margin: 0;
+}
+
+#encabezado{
+font-family: Oswald;
+font-size: 2rem;
+text-align: center;
+margin: 0;
+padding: 10px;
+background-color: #429123;
+}
+
+#estructurapagina{
+display: grid;
+grid-template-columns: 1fr 3.5fr 1fr;
+grid-template-rows: auto;
+margin:0;
+gap: 30px color black;
+}
+
+#estructuratema1{
+background-color: #447c2d;
+margin:0;
+border-right: 2px solid #000000;
+}
+
+#estructuratexto{
+background-color: #9bc53aa4;
+margin:0;
+border-left: 2px solid #000000;
+border-right: 2px solid #000000;
+border-top:4px solid #000000;
+}
+
+#estructuratema2{
+background-color: #447c2d;
+margin:0;
+border-left: 2px solid #000000;
+
+}
+button {
+color:#000000;
+font-weight:bolder;
+font-family:WDXL Lubrifont TC, Sans-Serif;
+font-size:3rem;
+text-decoration: none;
+display: block;
+width: 100%;
+background-color: #acfbcd;
+width: 100%;
+border: none;
+}
+
+button:hover{
+    transition: .5s;
+background-color:#e4dd13;
+color:#271f1f;
+}
+
+button span{
+display:inline-block;
+transition: transform 0.3s ease-in-out;
+width: 100%;
+cursor:pointer;
+}
+
+button span:hover{
+transform: translateY(-5px);
+
+}
+
+button.activo {
+  background-color: #c53c3c;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#opciones{
+font-size:3rem;
+column-count:2;
+list-style: none;
+text-align:center;
+column-rule:8px solid black;
+margin: 0;
+padding: 0;
+text-decoration: none;
+column-gap: 4px;
+border-top: 4px solid black;
+border-bottom: 4px solid black;
+}
+
+h2{
+font-family:Bebas Neue;
+font-size:3rem;
+text-align: center;
+}
+
+#padding{
+padding-left: 20px;
+padding-right: 20px;
+}
+
+p{
+font-family: Josefin Sans;
+font-size: 1.5rem;
+padding-right: 10px;
+}
+
+h3{
+font-family: Bebas Neue;
+font-size:2rem;
+text-align: center;
+}
+
+.separador{
+border-color: #000000;
+}
+
+.series,
+.peliculas {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+
+}
+
+
+a{
+color:#000000;
+font-family:Outfit, sans-serif;
+font-size:1rem;
+text-decoration: none;
+width: 100%;
+}
+
+a:hover{
+transition: .5S;
+background-color: #0d35a3c9;
+color:#271f1f;
+padding-left: 30px;
+}
+
+
+.active{
+
+background-color: #2653ce86;
+padding-left: 30px;
+}
+
+.estructurasubtema .subtema1{
+cursor:pointer;
+
+}
+
+.estructurasubtema .subtema1.activo .subtemas{
+display:block;  
+}
+
+.estructurasubtema .subtemas{
+display: none;
+margin-left: 15px;
+
+}
+.subtemas{
+display: none;
+padding: none;
+margin: none;
+}
+
+.temas{
+color:#000000;
+font-family:Outfit, sans-serif;
+font-size:16px;
+text-decoration: none;
+width: 100%;
+cursor: pointer;
+}
+
+.temas:hover{
+transition: .5S;
+background-color: #0d35a3c9;
+color:#271f1f;
+padding-left: 20px;
+}
+.temas:active{
+background-color:#1100ffcb;
+}
+
+a:active{
+background-color: #1100ffb6;
+}
+
+.estructurasubtema {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subtemas {
+  display: none;
+  margin-left: 5px;
+  padding: 0;
+  list-style-type: disc;
+  font-size:10px;
+}
+
+.subtema1 {
+  cursor: pointer;
+}
+
+.subtemas a {
+  font-size: 14px; 
+}
+
+#indice{
+font-family: Poetsen One;
+}
+
+a#cambiarseccion{
+font-family:Outfit, sans-serif;
+font-size:1rem;
+text-decoration: none;
+display: inline-block;
+width: auto; 
+transition: .5S;
+font-size: 3rem;
+color:#0a2937;
+text-align: center;
+}
+
+a#cambiarseccion:hover{
+background-color: #0d5fa3c9;
+color:#271f1f;
+padding-right: 10px;
+transition: .5S;
+}
+
+.ocultar {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+#indiceserie{
+padding-left: 20px;
+ white-space: nowrap;
+
+
+}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Cal+Sans&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poetsen+One&family=Tagesschrift&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h2 id="titulo">ADAPTACIONES</h2>
+
+<div id="estructurapagina">
+
+<div id="estructuratema1">
+<a style="font-size: 3rem;color:#0a2937;" href="index.HTML">⬅︎VOLVER</a>
+<div style="position:fixed;">
+<div class="peliculas">
+<h3 id="indice">TEMAS</h3>
+<ul style="padding-right: 10px;">
+  <li><a href="#TROSH">SHERLOCK HOLMES(1929)</a></li>
+  <li><a href="#EHQFSH">SHERLOCK HOLMES(1937)</a></li>
+  
+  <li class="subtema1" onclick="toggle(this)">
+    <span class="temas">SAGA 14 FILMS(1939/1949)</span>
+    <ul class="subtemas">
+      <li><a href="#SHYLVDT">SHERLOCK HOLMES Y LA VOZ DEL TERROR</a></li>
+      <li><a href="#SHYEAS">SHERLOCK HOLMES Y EL ARMA SECRETA</a></li>   
+      <li><a href="#SHEW">SHERLOCK HOLMES EN WASHINGTON</a></li>
+      <li><a href="#SHYLMA">SHERLOCK HOLMES Y LA MUJER ARAÑA</a></li> 
+      <li><a href="#SHVPM">SHERLOCK HOLMES:VESTIDO PARA MATAR</a></li>   
+    </ul>
+  </li>
+  
+  <li><a href="#ESDLB">EL SABUESO DE LOS BASKERVILLE</a></li>
+  <li><a href="#APD">ASESINATO POR DECRETO</a></li>
+  <li><a href="#EJSH">EL JOVEN SHERLOCK HOLMES</a></li>
+  
+  <li class="subtema1" onclick="toggle(this)">
+    <span class="temas">SAGA 2 FILMS ROBERT DOWNEY JR</span>
+    <ul class="subtemas">
+      <li><a href="#SH">SHERLOCK HOLMES(2010)</a></li>
+      <li><a href="#SHJDS">SHERLOCK HOLMES:JUEGO DE SOMBRAS</a></li>   
+    </ul>
+  </li>
+</ul>
+</div>
+</div>
+</div>
+<div id="estructuratexto">
+<h3 id="encabezado">Esta sección se tratara sobre las cientas de adaptaciones que se hizo de "Sherlock Holmes"</h3>
+<div id="opciones">
+<button  data-tipo="peliculas" onclick="mostrarContenido('peliculas')"><span>PELICULAS</span></button>
+<button  data-tipo="series" onclick="mostrarContenido('series')"><span>SERIES</span></button>
+</div>
+
+<div id="padding">
+
+<p id="opcion" style="text-align: center;"><b>⬆︎ELIJA UNA OPCION⬆︎</b></p>
+ <div class="peliculas">
+  
+<p style="padding-left: 20px;padding-right: 20px;">En todo este tiempo se hicieron muchas peliculas sobre Sherlock Holmes, desde el inicio del cine ya se habian creado unas cuantas.</p>
+<p style="padding-left: 20px;padding-right: 20px;font-weight: bolder;">NOTA:Prescindí, de las peliculas mudas, puesto que no tienen ningun dialogo y de algunas peliculas que casi no hay información.</p>
+
+<h2 id="TROSH">"EL REGRESO DE SHERLOCK HOLMES"</h2>
+<hr class="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"EL REGRESO DE SHERLOCK HOLMES"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/TROSH.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Basil Dean<hr>
+GUIÓN:Basil Dean, Garrett Fort<hr>
+PRODUCTOR:Basil Dean<hr>
+PRODUCTORA: Paramount Pictures<hr>
+DURACIÓN:71 minutos<hr>
+ESTRENO:26 de octubre de 1929<hr>
+REPARTO:Clive Brook, H. Reeves-Smith<hr>
+Betty Lawford<hr>
+IDIOMA:Ingles<hr>
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0020324/">The return Of Sherlock Holmes</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCION</h3>
+
+<p>The Return of Sherlock Holmes (en español: El regreso de Sherlock Holmes) es una película de misterio estadounidense de 1929 dirigida por Basil Dean y escrita por Arthur Conan Doyle, Basil Dean y Garrett Fort. La película comparte su título con el tercer volumen de las historias de Sherlock Holmes, El regreso de Sherlock Holmes de Arthur Conan Doyle. La película está protagonizada por Clive Brook, H. Reeves-Smith, Betty Lawford, Charles Hay y Phillips Holmes.</p>
+
+<p>La película fue estrenada el 29 de octubre de 1929 por Paramount Pictures. Se conserva una copia en la Biblioteca del Congreso de los Estados Unidos.</p>
+
+<h3>SINOPSIS</h3>
+
+<p>Sherlock Holmes y el Dr. Watson se enfrentan nuevamente al profesor Moriarty, cuando Sherlock empieza a investigar el asesinato de un capitán de barco y la sospechosa desaparición del hijo del capitán, acusado del crimen.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de esta pelicula es:<br>
+<b>Clive Brook - Sherlock Holmes<br>
+H. Reeves-Smith - Dr. Watson<br>
+Betty Lawford - Mary Watson<br>
+Charles Hay - Capiitán Longmore<br>
+Phillips Holmes - Roger Longmore<br>
+Donald Crisp - Coronel Moran<br>
+Harry T. Morey - Profesor Moriarty<br>
+Hubert Druce - Sargento Gripper</b></p>
+
+<h2 id="EHQFSH">"EL HOMBRE QUE FUE SHERLOCK HOLMES"</h2>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"EL HOMBRE QUE FUE SHERLOCK HOLMES"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/DMDSHW.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Karl Hartl<hr>
+Eduard von Borsody<hr>
+GUIÓN:Robert A. Stemmle,Karl Hartl<hr>
+PRODUCTOR:Alfred Greven<hr>
+PRODUCTORA: Paramount Pictures<hr>
+DURACIÓN:107 minutos<hr>
+ESTRENO:1937<hr>
+REPARTO:Hans Albers, Morris Flint<hr>
+Heinz Rühmann</hr>
+IDIOMA:Aleman
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0029210/">El hombre que fue Sherlock Holmes</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCIÓN</h3>
+
+<p>El hombre que fue Sherlock Holmes o también Sherlock Holmes (título original: Der Mann, der Sherlock Holmes war) es una película de comedia y misterio alemana de 1937[1]​ dirigida por Karl Hartl y protagonizada por Hans Albers, Heinz Rühmann y Marieluise Claudius.</p>
+
+<h3>SINOPSIS</h3>
+
+<p>El detective Morris Flynn (Hans Albers) y su asistente Macky McMacpherson (Heinz Rühmann), disfrazados de Sherlock Holmes y el Dr. Watson, investigan a dos atractivas hermanas, Mary y Jane Berry, y el robo y la falsificación de valiosos sellos postales.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la pelicula es:<br>
+<b>Hans Albers - Sherlock Holmes / Morris Flint<br>
+Heinz Rühmann - Doctor Watson / Macky McPherson<br>
+Marieluise Claudius - Mary Berry<br>
+Paul Bildt - Sir Arthur Conan Doyle<br>
+Erich Walter - El director de hotel<br></b></p>
+<br><br><br><br><br><br><br>
+
+
+<h2>UNA SERIE DE 14 FILMS CON  "Basil Rathbone" Y Nigel Bruce"</h2>
+<hr class="separador">
+<h3 ID="SHYLVDT">SHERLOCK HOLMES Y LA VOZ DEL TERROR</h3>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"SHERLOCK HOLMES Y LA VOZ DEL TERROR"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/SHATVOF.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:John Rawlins<hr>
+GUIÓN:Lynn Riggs<hr>
+John Bright<hr>
+Robert Hardy Andrews<hr>
+PRODUCTOR:Howard Benedict<hr>
+PRODUCTORA: Universal Pictures<hr>
+DURACIÓN:64 minutos<hr>
+ESTRENO:1942<hr>
+PROTAGONISTA:	Basil Rathbone,Nigel Bruce<hr>
+IDIOMA:Ingles
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0035318/">Sherlock Holmes y la voz del terror</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCION</h3>
+
+<p>Sherlock Holmes and the Voice of Terror, titulada en español La voz del terror o Sherlock Holmes y la voz del terror, es una película estadounidense de 1942 dirigida por John Rawlins. Fue protagonizada por Basil Rathbone y Nigel Bruce en los papeles de Sherlock Holmes y John H. Watson, respectivamente, siendo la tercera película en la que interpretaron aquellos roles. La trama se basa libremente en el cuento Su último saludo en el escenario de Arthur Conan Doyle, así como en ciertos eventos ocurridos durante la Segunda Guerra Mundial.</p>
+
+<h3>TRAMA</h3>
+
+<P>Cuando un saboteador alemán predice con sarcasmo nuevas depredaciones a la nación a través de la radio "Voz del Terror", el Consejo Interno de Seguridad Nacional convoca a Sherlock Holmes ( Basil Rathbone ) para ayudar en la crisis. Holmes y su compañero, el Dr. Watson ( Nigel Bruce ), reciben una visita la primera noche de su investigación, pero este muere de un puñal por la espalda. Su última palabra lleva a Holmes a los barrios bajos, donde se encuentra con Kitty ( Evelyn Ankers ), la novia del hombre asesinado, quien promete ayudar en la investigación en todo lo que pueda.</P>
+
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la pelicula es:<br>
+<b>Basil Rathbone como Sherlock Holmes.<br>
+Nigel Bruce como Dr. John H. Watson<br>
+Evelyn Ankers como Kitty.<br>
+Henry Daniell como Sir Alfred Lloyd.<br>
+Thomas Gomez como R.F. Meade<br>
+Reginald Denny como Sir Evan Barham.<br>
+Leyland Hodgson como Capitán Roland Shore.<br>
+Olaf Hytten como Almirante Sir John Prentiss.<br>
+Montagu Love como General Jerome Lawford.<br>
+Hillary Brooke como Jill Grandis.<br></b> 
+</p>
+<hr class="separador">
+<h3 ID="SHYEAS">SHERLOCK HOLMES Y EL ARMA SECRETA</h3>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"SHERLOCK HOLMES Y EL ARMA SECRETA"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/SHATSW.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Roy William Neill<hr>
+GUIÓN:William Scott Darling<hr>
+PRODUCTORA: Universal Pictures<hr>
+DURACIÓN:68 minutos<hr>
+ESTRENO:1942<hr>
+PROTAGONISTA:	Basil Rathbone,Nigel Bruce<hr>
+IDIOMA:Ingles
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es-es/title/tt0035317/">Sherlock Holmes y el arma secreta</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+<h3>DESCRIPCION</h3>
+<P>Sherlock Holmes and the Secret Weapon (en España: Sherlock Holmes y el arma secreta) es una película de intriga policíaca estadounidense de 1942 dirigida por Roy William Neill. Es otro caso del detective Sherlock Holmes, de la serie de películas con el actor Basil Rathbone interpretando al famoso detective. La película se acredita como una adaptación del cuento de 1903 de Conan Doyle Los bailarines, aunque el único elemento del material original es el código de los bailarines.
+
+
+<h3>TRAMA</h3>
+
+<p>La película trata sobre el secuestro de un científico suizo por parte de su némesis, el profesor Moriarty, para robar una nueva bomba y vendérsela a la Alemania nazi. Sherlock Holmes y el Dr. John Watson tienen que descifrar un código secreto para salvar el país.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la pelicula es:<br>
+<b>Basil Rathbone - Sherlock Holmes<br>
+Nigel Bruce - Dr. John Watson<br>
+Lionel Atwill - Profesor Moriarty<br>
+Kaaren Verne - Charlotte Eberli<br>
+William Post Jr. - Dr Franz Tobel<br>
+Dennis Hoey - Inspector Lestrade<br>
+Holmes Herbert - Sir Reginald Bailey<br>
+Henry Victor - Dr. Frederick Hoffner<br>
+Mary Gordon - Sra. Hudson</b>
+</p>
+<BR>
+<hr class="separador">
+<h3 ID="SHEW">SHERLOCK HOLMES EN WASHINGTON</h3>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"SHERLOCK HOLMES EN WASHINGTON"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/SHIW.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Roy William Neill<hr>
+GUIÓN:William Bertram Millhauser<hr>
+PRODUCTORA: Universal Pictures<hr>
+DURACIÓN:71 minutos<hr>
+ESTRENO:1943<hr>
+PROTAGONISTA:	Basil Rathbone,Nigel Bruce<hr>
+IDIOMA:Ingles
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0036349/">Sherlock Holmes en Washington</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+<h3>DESCRIPCION</h3>
+<p>Sherlock Holmes in Washington (en España: Sherlock Holmes en Washington) es una película de intriga policíaca estadounidense de 1943 dirigida por Roy William Neill. Es la quinta película de la serie de 14 películas de Sherlock Holmes con el actor Basil Rathbone interpretando al famoso detective. La trama es una historia original que no se basa en ninguno de los cuentos de Holmes de Sir Arthur Conan Doyle.</p>
+
+
+<h3>TRAMA</h3>
+
+<p>Sherlock Holmes es contratado por el Ministerio del Interior para localizar a un ciudadano británico que viajaba a Washington, D.C. para su bufete de abogados. El hombre había volado a Nueva York y luego había tomado el tren a Washington. En las afueras de la ciudad, el hombre fue secuestrado y no se le ha visto desde hace varios días. Holmes se entera por el Ministerio del Interior que el hombre era, de hecho, un agente del gobierno que entregaba un documento altamente secreto de dos páginas al gobierno estadounidense. Al verificar el contenido en su apartamento, Holmes concluye que el documento había sido microfilmado.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la pelicula es:<br>
+<b>Basil Rathbone - Sherlock Holmes<br>
+Nigel Bruce - Dr. Watson<br>
+Marjorie Lord - Nancy Partridge<br>
+Henry Daniell - William Easter<br>
+George Zucco - Heinrich Hinkel<br>
+John Archer - Lt. Pete Merriam<br>
+Gavin Muir - Mr. Lang<br>
+Edmund MacDonald - Detective Lt. Grogan<br>
+Don Terry - Howe<br>
+Bradley Page - Cady<br>
+Holmes Herbert - Mr. Ahrens<br>
+Thurston Hall - Senador Henry Babcock<br>
+Mary Gordon - Sra. Hudson</b></p>
+
+<hr class="separador">
+<h3 ID="SHYLMA">SHERLOCK HOLMES Y LA MUJER ARAÑA</h3>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"SHERLOCK HOLMES Y LA MUJERA ARAÑA"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/SHASw.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Roy William Neill<hr>
+GUIÓN:William Bertram Millhauser<hr>
+PRODUCCIÓN:Roy William Neill<hr>
+PRODUCTORA: Universal Pictures<hr>
+DURACIÓN:71 minutos<hr>
+ESTRENO:1943<hr>
+PROTAGONISTA:	Basil Rathbone,Nigel Bruce<hr>
+IDIOMA:Ingles
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0037303/">Sherlock Holmes y la mujer araña</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCION</h3>
+<p>The Spider Woman (en España: Sherlock Holmes y la mujer araña y también La mujer araña) es una película de intriga policiaca estadounidense de 1943 dirigida por Roy William Neill y protagonizada por Basil Rathbone como Sherlock Holmes y Nigel Bruce como el Dr. Watson</p>
+
+<p>la película está ambientada en la época actual en lugar de en la época victoriana de las historias originales del detective Sherlock Holmes. Esta película incorpora elementos de la novela de 1890 El signo de los cuatro, así como de los cuentos El problema final, La casa deshabitada, La banda de lunares y hace referencia explícita a El pie del diablo.</p>
+
+<h3>TRAMA</h3>
+
+<p>Una serie de suicidios similares tienen lugar en Londres mientras Holmes está de vacaciones en Escocia; poco después de quejarse a Watson sobre su salud, Holmes se desploma en un barranco y desaparece, presumiblemente muerto. En realidad, Holmes ha fingido su propia muerte para intentar localizar a la banda que está detrás de lo que él cree que son asesinatos, llevados a cabo por una "Moriarty femenina". Al ver que la conexión común entre las muertes es un plan de seguros de vida, Holmes se disfraza de Rajni Singh, un oficial indio que ha perdido mucho en las mesas de juego y está en desgracia: Adrea Spedding, la líder de la banda, se acerca a él y le dice que puede pedir dinero prestado utilizando su póliza de seguro. Ella descubre del disfraz de Holmes e intenta matarlo usando una araña venenosa cuyo veneno causa un dolor tan insoportable que las víctimas se suicidan. Holmes y Watson visitan al conocido aracnólogo Matthew Ordway para ver quién ha comprado las arañas recientemente, pero Holmes deduce que el hombre es un impostor. Ordway escapa y Holmes y Watson le encuentran muerto. Siguen la pista de los villanos hasta una feria donde, a pesar de un atentado contra la vida de Holmes, la banda es arrestada.</p>
+
+<p>El reparto de la pelicula es:<br>
+<b>Basil Rathbone - Sherlock Holmes<br>
+Nigel Bruce - Dr. John Watson<br>
+Gale Sondergaard - Adrea Spedding<br>
+Vernon Downing - Norman Locke<br>
+Dennis Hoey - Inspector Lestrade<br>
+Alec Craig - Radlik<br>
+Arthur Hohl - Adam Gilflower<br>
+Teddy Infuhr - Larry<br>
+Angelo Rossitto - El pigmeo<br>
+Belle Mitchell - Adivino del carnaval<br>
+Frank Benson - Vendedor de muñecas<br>
+Gene Roth - Taylor<br>
+Mary Gordon - Sra. Hudson<br></b>
+</p>
+<hr class="separador">
+<H3 ID="SHVPM">SHERLOCK HOLMES:VESTIDO PARA MATAR</H3>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"SHERLOCK HOLMES:VESTIDO PARA MATAR"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/SHDTL.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Roy William Neill<hr>
+GUIÓN:Arthur Conan Doyle<hr>
+PRODUCCIÓN:Roy William Neill<hr>
+PRODUCTORA: Universal Pictures<hr>
+DURACIÓN:76 minutos<hr>
+ESTRENO:1946<hr>
+PROTAGONISTA:	Basil Rathbone,Nigel Bruce<hr>
+IDIOMA:Ingles
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0038494/">VESTIDO PARA MATAR</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+<h3>DESCRIPCION</h3>
+<p>Dressed to Kill (Vestida para un asesinato o Vestida para matar) es un largometraje estadounidense en el que los personajes principales son Sherlock Holmes y el Dr. Watson. No está basada en una historia concreta del detective publicada anteriormente, pero hay referencia a Escándalo en Bohemia y la trama es semejante a la de Los seis Napoleones.</p>
+
+<h3>TRAMA</h3>
+
+<p>Un presidiario aún cumpliendo pena fabrica cajas de música para redimir condena. Tres de estas cajas son subastadas y varias personas están interesadas en su compra. Pero lo que no sabe ninguno de los compradores es que el presidiario, que formó parte otrora de una banda de ladrones, había insertado en la melodías de las cajas la clave donde estaban escondidas las planchas del billete de cinco libras del banco de Inglaterra.</p>
+
+<p>El asesinato de uno de los compradores pone en alerta a la policía y a Sherlock Holmes, quien con su amigo Watson empieza una investigación y descubre que, merced a la ayuda de un músico tabernario amigo, la caja que conserva la policía tiene parte del código. Éste se completará con las otras dos cajas robadas por una banda de maleantes, de la que forma parte la Sra. Courtney y el coronel Cabanna. Felizmente, gracias a la intervención inteligente de Holmes y Watson, se recuperan las planchas para el banco de Inglaterra.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la pelicula es:<br>
+<b>Basil Rathbone - Sherlock Holmes<br>
+Nigel Bruce - Dr. John H. Watson<br>
+Patricia Morison - Hilda Courtney<br>
+Edmund Breon - Julian "Stinky" Emery<br>
+Frederick Worlock - Colonel Cavanaugh<br>
+Carl Harbord - Inspector Hopkins<br>
+Patricia Cameron - Evelyn Clifford<br>
+Holmes Herbert - Ebenezer Crabtree<br>
+Harry Cording - Hamid<br>
+Leyland Hodgson - Guia turístico<br>
+Mary Gordon - Sra. Hudson<br>
+Ian Wolfe - Comisario de policía<br>
+Anita Sharp-Bolster - Profesora en la visita al museo<br></b>
+</p>
+
+<h2 ID="ESDLB">EL SABUESO DE LOS BASKERVILLE</h2>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"EL SABUESO DE LOS BASKERVILLE"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones//THOTB.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Terence Fisher<hr>
+GUIÓN:Peter Bryan, Arthur Conan Doyle<hr>
+PRODUCCIÓN:	
+Michael Carreras, Anthony Hinds<hr>
+Kenneth Hyman<hr>
+PRODUCTORA:Hammer Productions<hr>
+DURACIÓN:76 minutos<hr>
+ESTRENO:3 de julio de 1959<hr>
+PROTAGONISTA:	Michael Carreras, Anthony Hinds<hr>
+Kenneth Hyman<hr>
+PAÍS:Reino Unido
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0052905/">El sabueso de los Baskerville</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+<h3>DESCRIPCION</h3>
+<p>El sabueso de los Baskerville es una película inglesa de 1959 dirigida por Terence Fisher y protagonizada por Peter Cushing, André Morell y Christopher Lee. Basada en la novela homónima de Arthur Conan Doyle, la película fue la primera en color que se hizo del personaje Sherlock Holmes, aunque se convirtió en un fracaso en taquilla, por lo que no se siguió con un ciclo con Cushing como protagonista, aunque sí protagonizaría una serie de la BBC y el telefilme Las máscaras de la muerte. La interpretación de Cushing de Holmes es valorada como una de las mejores hechas en el cine junto con las de Basil Rathbone y Jeremy Brett, mientras que la película es valorada como una de las mejores protagonizadas por el detective.</p>
+
+<h3>TRAMA</h3>
+
+<p>Cuando un noble se ve amenazado por una maldición familiar sobre su patrimonio recién heredado, se contrata al detective Sherlock Holmes para investigar.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la pelicula es:<br>
+<b>Peter Cushing ... Sherlock Holmes<br>
+André Morell ... Doctor John H. Watson<br>
+Christopher Lee ... Sir Henry Baskerville<br>
+Marla Landi ... Cecile Stapleton<br>
+David Oxley ... Sir Hugo Baskerville<br>
+Francis De Wolff ... Doctor Richard Mortimer<br>
+Miles Malleson ... Obispo Frankland<br>
+Ewen Solon ... Stapleton<br>
+John Le Mesurier ... Barrymore<br>
+Helen Goss ... Sra. Barrymore<br>
+Sam Kydd ... Perkins<br>
+Michael Hawkins ... Lord Caphill<br>
+Judi Moyens ... Joven sirviente<br>
+Michael Mulcaster ... Selden<br>
+David Birks ... Sirviente<br></b>
+</p>
+
+<h2 ID="APD">"ASESINATO POR DECRETO"</h2>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"ASESINATO POR DECRETO"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/APD.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:	Bob Clark<hr>
+GUIÓN:John Hopkins y Elwyn Jones<hr>
+PRODUCCIÓN:	Bob Clark, René Dupont y<hr>
+Robert A. Goldston<hr>
+PRODUCTORA:CFDC y Famous Players<hr>
+DURACIÓN:124 minutos<hr>
+ESTRENO:1979<hr>
+PROTAGONISTA:Christopher Plummer,<hr>
+James Mason y David Hemmings<hr>
+PAÍS:Reino Unido y Canadá
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0079592/">ASESINATO POR DECRETO</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCION</h3>
+<p>Asesinato por decreto es una película del género suspense estrenada en 1979. Fue dirigida por Bob Clark y protagonizada por Christopher Plummer, James Mason y David Hemmings. En la cinta aparecen los personajes de Sir Arthur Conan Doyle, Sherlock Holmes y el Doctor Watson, investigando los casos del asesino en serie conocido como Jack el Destripador. La historia detrás del argumento de la película procede del libro Jack the Ripper: The Final Solution de Stephen Knight, aunque los nombres de muchos de los involucrados fueron cambiados. La interpretación de Sherlock Holmes realizada por Plummer ha sido calificada como «brillante», por su parte la de Mason es valorada por Carlos Díaz Maroto como la mejor que se ha hecho de John H. Watson.</p>
+
+
+<h3>TRAMA</h3>
+
+<P>En 1888 en el área de Whitechapel en Londres sucedieron una serie de homicidios extraordinariamente brutales con un distintivo modus operandi. Todos las víctimas eran prostitutas, los crímenes ocurrieron a pocas calles de distancia, tarde por la noche o muy temprano por la mañana, de una manera particularmente sangrienta y fueron cometidos por un desconocido que más tarde fue denominado Jack el Destripador. El jefe de Scotland Yard, con renuencia, solicita la ayuda del famoso detective Sherlock Holmes que, junto al Doctor Watson, terminan investigando los brutales asesinatos. Finalmente se descubre que están implicados destacados personajes de la sociedad en una especie de conspiración en la que también participan miembros de la francmasonería y de la familia real británica.</P>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la pelicula es:<br>
+<b>Christopher Plummer....Sherlock Holmes<br>
+James Mason....Dr. Watson<br>
+David Hemmings....Inspector Foxborough<br>
+Susan Clark....Mary Jane Kelly<br>
+Frank Finlay....Inspector Lestrade<br>
+Anthony Quayle....Sir Charles Warren<br>
+Donald Sutherland....Robert James Lees<br>
+Geneviève Bujold....Annie Crook<br>
+John Gielgud....Lord Salisbury</b><br>
+</p>
+
+<h2 ID="EJSH">"EL JOVEN SHERLOCK HOLMES"</h2>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"EL JOVEN SHERLOCK HOLMES"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/YSH.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Barry Levinson<hr>
+GUIÓN:Cris Columbus<hr>
+PRODUCCIÓN:	Mark Johnson, Henry Winkler y<hr>
+Steven Spielberg<hr>
+PRODUCTORA:CFDC y Famous Players<hr>
+DURACIÓN:108 minutos<hr>
+ESTRENO:1985<hr>
+PROTAGONISTA:Nicholas Rowe<hr>
+Alan Cox y Anthony Higgins<hr>
+PAÍS:Estados Unidos
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0090357/">EL JOVEN SHERLOCK HOLMES</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+<h3>DESCRIPCION</h3>
+<p>Young Sherlock Holmes (titulada El secreto de la pirámide en España y El joven Sherlock Holmes en Hispanoamérica) es una película de aventuras y misterio dirigida por Barry Levinson en el año 1985. El guion, escrito por Chris Columbus, está basado en los personajes Sherlock Holmes y el doctor Watson, creados por Arthur Conan Doyle, aunque más jóvenes.</p>
+
+<h3>TRAMA</h3>
+
+<p>En el Londres de 1870, en la prestigiosa Brompton Academy, el joven Sherlock Holmes (Nicholas Rowe) conoce al que será su gran amigo, John Watson (Alan Cox).</p>
+
+<p>Varias personas de la ciudad son atacadas por un misterioso encapuchado con dardos venenosos perteneciente a una secta neopagana oculta, provocando que acaben suicidándose. Holmes sospecha que los suicidios no son casuales, sino asesinatos, pero en Scotland Yard el Inspector Lestrade niega que haya relación entre las muertes. Entre tanto, Holmes está enamorado de la sobrina de su mentor, Rupert T. Waxflatter, Elizabeth.</p>
+
+<h3>REPARTO</h3>
+
+<P>El reparto de la pelicula es:<br>
+<b>Nicholas Rowe	Sherlock Holmes<br>
+Alan Cox - John Watson<br>
+Sophie Ward	- Elizabeth Hardy<br>
+Anthony Higgins	- Profesor Rathe / Eh-Tar / James Moriarty<br>
+Susan Fleetwood	- Sra. Dribb<br>
+Freddie Jones	- Chester Cragwitch<br>
+Nigel Stock	- Rupert Waxflatter<br>
+Roger Ashton-Griffiths	- Inspector Lestrade<br>
+Earl Rhodes	- Dudley<br>
+Brian Oulton - Maestro Snelgrove<br>
+Patrick Newell - Bentley Bobster<br>
+Donald Eccles	- Reverendo Duncan Nesbitt<br>
+Walter Sparrow	- Ethan Engel<br>
+Nadim Sawalha	- Propietario de taberna egipcia<br>
+Roger Brierley	- Sr. Holmes<br>
+Vivienne Chandler	- Sra. Holmes<br>
+Lockwood West -	Propietario de tienda de curiosidades<br>
+John Scott Martin	- Cuidador de cementerio<br>
+Willoughby Goddard - Reverendo de escuela<br>
+Michael Hordern	- Viejo John Watson</b>
+</P>
+
+<H2>UNA SERIE DE 2 FILMS CON "ROBERT DOWNEY JUNIOR" Y "JUDE LAW"</H2>
+<hr class="separador">
+<h3 ID="SH">"Sherlock Holmes"</h3>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"SHERLOCK HOLMES"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/SH.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Guy Ritchie<hr>
+GUIÓN:Mike Johnson,Guy Ritchie y<hr>
+Anthony Peckham<hr>
+PRODUCCIÓN:	Bruce Berman y<hr>
+Steve Clark-Hall<hr>
+PRODUCTORA:	Silver Pictures<hr>
+Village Roadshow Pictures,Lin Pictures y Translux<hr>
+DURACIÓN:128 minutos<hr>
+ESTRENO:2009<hr>
+PROTAGONISTA:Robert Downey Jr,<hr>
+Rachel McAdams y Jude Law<hr>
+PAÍS:Estados Unidos
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0988045/">SHERLOCK HOLMES</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCION</h3>
+<p>Sherlock Holmes es una película del año 2009 dirigida por Guy Ritchie y protagonizada por Robert Downey Jr. y Jude Law. Su segunda parte es Sherlock Holmes: Juego de sombras (2011). Está basada en el personaje original de Sir Arthur Conan Doyle.</p>
+
+<h3>TRAMA</h3>
+
+<p>Tras capturar finalmente al asesino en serie y hechicero ocultista Lord Blackwood, el legendario detective Sherlock Holmes y su ayudante, el Dr. Watson, pueden cerrar otro caso con éxito. Pero cuando Blackwood regresa misteriosamente de la tumba y reanuda su racha de asesinatos, Holmes debe retomar la caza. Enfrentándose a la nueva prometida de su compañero y al ingenuo director de Scotland Yard, el intrépido detective debe desentrañar las pistas que lo llevarán a una retorcida red de asesinatos, engaños y magia negra, y al abrazo mortal de la tentadora Irene Adler</p>
+
+<h3>REPARTO</h3>
+<p>El reparto de la pelicula es:<br>
+<b>Robert Downey Jr. como Sherlock Holmes<br>
+Jude Law como el Dr. Watson<br>
+Rachel McAdams como Irene Adler<br>
+Mark Strong como Lord Blackwood<br>
+Kelly Reilly como Mary Morstan<br>
+Eddie Marsan como el inspector Lestrade<br>
+Hans Matheson como Lord Coward<br>
+James Fox como Sir Thomas<br>
+Robert Stone como el boxeador<br>
+William Hope como John Standish<br>
+David Garrick como McMurdo<br>
+William Houston como el alguacil Clark<br>
+Robert Maillet como Dredger<br>
+Terry Taplin como el jardinero</b><br>
+</p>
+<hr class="separador">
+<h3 ID="SHJDS">SHERLOCK HOLMES, JUEGO DE SOMBRAS</h3>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"SHERLOCK HOLMES:JUEGO DE SOMBRAS"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/SHJDS.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Guy Ritchie<hr>
+GUIÓN:Mike Johnson,Guy Ritchie y Anthony Peckham<hr>
+PRODUCCIÓN:Joel Silver,Lionel Wigram<hr>
+Susan Downey y Dan Lin<hr>
+PRODUCTORA:Village Roadshow Pictures,Silver Pictures<hr>
+Silver Pictures, Wigram Productions y Lin Pictures<hr>
+DURACIÓN:129 minutos<hr>
+ESTRENO:2011<hr>
+PROTAGONISTA:Robert Downey Jr,<hr>
+Jude Law y Noomi Rapace<hr>
+PAÍS:Estados Unidos
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt1515091/">SHERLOCK HOLMES:JUEGO DE SOMBRAS</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCION</h3>
+<p>Sherlock Holmes: Juego de sombras (título original en inglés: Sherlock Holmes: A Game of Shadows) es una película de 2011 dirigida por Guy Ritchie y protagonizada por Robert Downey Jr. y Jude Law. Basada en el personaje homónimo creado por Conan Doyle, la película es la secuela de Sherlock Holmes (2009) y está producida por Joel Silver, Lionel Wigram, Susan Downey y Dan Lin.</p>
+
+
+<H3> TRAMA</H3>
+
+<p>La trama está basada principalmente en el cuento "El problema final", el cual aparece en el libro Memorias de Sherlock Holmes, pero también incluye aspectos y personajes de otros cuentos, como es el caso de Sebastian Moran de "La casa deshabitada". Sherlock Holmes (Robert Downey Jr.) y el doctor Watson (Jude Law) van a conocer a su peor enemigo, el profesor James Moriarty (Jared Harris), alguien tan listo como Holmes, quien tiene como objetivo una serie de atentados para desatar una guerra mundial y poder tener el gran negocio de vender armas. Ambos amigos viajarán por Londres, París y Suiza con tal de encontrarle y detenerlo.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la pelicula es:<br>
+<b>Robert Downey Jr. como Sherlock Holmes<br>
+Jude Law como Dr. John Watson<br>
+Jared Harris como el profesor James Moriarty<br>
+Noomi Rapace como Simza<br>
+Stephen Fry como Mycroft Holmes<br>
+Kelly Reilly como Mary Morstan Watson<br>
+Paul Anderson como Sebastian Moran<br>
+Rachel McAdams como Irene Adler<br>
+Eddie Marsan como el inspector Lestrade<br>
+Geraldine James como Mrs. Hudson<br>
+Fatima Adoum como una gitana</b><br> 
+</p>
+</div>
+
+
+<div class="series">
+
+<p style="padding-left: 20px;padding-right: 20px;">A diferencia de las peliculas, las series de Sherlock Holmes se hicieron mucho tiempo despues y en menor cantidad.</p>
+<p style="padding-left: 20px;padding-right: 20px;font-weight: bolder;">NOTA:Prescindí de alguna que otra serie ya que hay poca información.</p>
+
+<h2 ID="LRDSH">"LOS RIVALES DE SHERLOCK HOLMES"</h2>
+<hr class="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"LOS RIVALES DE SHERLOCK HOLMES"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/LRDSH.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>DIRECTOR:Hugh Greene<hr>
+GUIÓN:Muchos guionistas<hr>
+CANTIDAD EPISODIOS:13<hr>
+TEMPORADA:1<hr>
+PRODUCTORA:Thames Television<hr>
+DURACIÓN:	50 minutos<hr>
+ESTRENO:20 septiembre 1971 a 7 Mayo 1973<hr>
+PROTAGONISTA:Douglas Wilmer <hr>
+PAÍS:Gran Bretaña
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0167703/">LOS RIVALES DE SHERLOCK HOLMES</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCION</h3>
+
+<p>Los Rivales de Sherlock Holmes es una serie de televisión británica de antología de misterio producida por Thames Television y emitida originalmente por la cadena ITV . Constó de dos temporadas de 13 episodios de cincuenta minutos; la primera se emitió en 1971 y la segunda en 1973. [ 1 ] El programa presentaba adaptaciones de relatos cortos de misterio, suspense o crimen protagonizados, como su título indica, por detectives contemporáneos literarios de Sherlock Holmes, de Arthur Conan Doyle .</p>
+
+<p>Los rivales de Sherlock Holmes se inspiraron —y dieron título— en una serie de antologías publicadas por Hugh Greene , hermano menor del autor Graham Greene y exdirector general de la BBC.  Greene aparece acreditado en el programa como consultor creativo.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la serie es:</p>
+<p>RECURRENTE:</p> 
+<p><b>Douglas Wilmer as Augustus S. F. X. Van Dusen (2 episodios)<br>
+Peter Vaughan as Horace Dorrington (2 episodios)<br>
+Kenneth Colley as Farrish (2 episodios)<br>
+Petronella Barker as Miss Parrot (2 episodios)<br>
+Peter Barkworth as Martin Hewitt (2 episodios)<br>
+Ronald Hines as Jonathan Pryde (2 episodios)<br></p></b>
+<p>INVITADOS:</p>
+<p><b>Henri Szeps as Laval (1 episodio)<br>
+Peter Sallis as Dr. Jervis (1 episodio)<br>
+Reg Lye as Mortuary Superintendent (1 episodio)<br></b>
+</p>
+
+<h2 ID="EMDLM">EL JOVEN SHERLOCK:EL MISTERIO DE LA MANSIÓN</h2>
+<hr class="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"JOVEN SHERLOCK:EL MISTERIO DE LA MANSIÓN"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/YSTMOTM.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>CANTIDAD EPISODIOS: 8<hr>
+TEMPORADA:1<hr>
+ESTRENO:31 Octubre a 12 Diciembre 1982<hr>
+PROTAGONISTA:Guy Henry <hr>
+PAÍS:Gran Bretaña
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0271933/">JOVEN SHERLOCK:EL MISTERIO DE LA MANSIÓN</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCIÓN</h3>
+
+<P>El joven Sherlock: El misterio de la mansión es una serie de televisión de 8 episodios sobre la juventud de Sherlock Holmes. El programa fue producido por Granada Television y se estrenó el 31 de octubre de 1982. Aunque no hubo una secuela televisada de esta historia, Gerald Frow escribió una continuación para Dragon Books de Granada (quien en 1982 publicó su novelización de este relato). El joven Sherlock: La aventura en Ferryman's Creek salió a la venta en 1984.</P>
+
+<H3>TRAMA</H3>
+
+<p>Un joven Sherlock Holmes se topa con una conspiración para asesinar a la reina Victoria.</p>
+
+<h3>REPARTO</h3>
+<p>El reparto de la serie es:<br>
+<b>Guy Henry como Sherlock Holmes<br>
+June Barry como la Sra. Turnbull<br>
+Tim Brierley como John Whitney<br>
+Donald Douglas como el coronel Turnbull<br>
+Heather Chasen como la tía Rachel<br>
+John Fraser como el tío Gideon<br>
+Christopher Villiers como Jasper Moran<br>
+Lewis Fiander como Ranjeet<br>
+Eva Griffith como Charity<br>
+Zuleika Robson como Charlotte Whitney<br>
+David Futcher como el Doctor Sowerbutts<br>
+Raj Patel como Anil<br>
+Jane Lowe como la Sra. Cunliffe<br>
+Andrew Johns como el capitán Cholmondeley<br>
+Tom Chatto como el sargento Grimshaw<br>
+Ian McCurrach como Newbugs<br>
+Brian Orrell como Albert Bates<br>
+Michael Irwin como William Greasley</b><br>
+</p>
+
+<h2 ID="AVENTURA">SHERLOCK HOLMES (1984)</h2>
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"LAS AVENTURAS DE SHERLOCK HOLMES"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/SH1984.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>CANTIDAD EPISODIOS: 41<hr>
+PRODUCCION:Granada Television;
+TEMPORADA:4<hr>
+ESTRENO:1984 a 1994<hr>
+PROTAGONISTA:Guy Henry <hr>
+PAÍS:Gran Bretaña<hr>
+DURACION:50 minutos
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt0086661/">LAS AVENTURAS DE SHERLOCK HOLMES</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCIÓN</h3>
+
+<p>Las aventuras de Sherlock Holmes es el nombre de la serie de televisión basada en las adaptaciones de algunos de los casos del detective Sherlock Holmes creado por Arthur Conan Doyle y producida por Granada Television entre 1984 y 1994. Solamente las dos primeras temporadas llevan el título de Las aventuras de Sherlock Holmes mientras que las temporadas posteriores llevan títulos de las otras colecciones de relatos de Arthur Conan Doyle. La serie fue emitida en el Reino Unido en la cadena ITV y está protagonizada por Jeremy Brett como el famoso detective. Su caracterización del personaje alcanzó altas cotas de popularidad y es considerado por muchos como la versión definitiva de Sherlock Holmes.</p>
+
+<p>Además, a diferencia de adaptaciones anteriores, el fiel amigo y compañero de Holmes, el doctor Watson, es retratado como una persona competente, inteligente y bondadosa a la altura de lo que Holmes requiere en un compañero. Inicialmente, el doctor Watson fue interpretado por el actor David Burke en las primeras dos temporadas antes de abandonar la serie para unirse a la Royal Shakespeare Company. A recomendación de David Burke, el papel fue tomado por Edward Hardwicke, quien interpretó al doctor Watson hasta el final de la serie.</p>
+
+<p>De las 60 historias protagonizadas por Holmes escritas por Arthur Conan Doyle, 42 de ellas fueron adaptadas para la serie, divididas en 36 episodios de 50 minutos de duración y 5 especiales de dos horas (en uno de los especiales, los elementos de dos historias fueron combinados).</p>
+
+<h3>REPARTO</h3>
+<p>El reparto de la serie es:<br>
+<b>Jeremy Brett como Sherlock Holmes (1984-1994)<br>
+David Burke como Dr. John H. Watson (1984-1985)<br>
+Edward Hardwicke como Dr. John H. Watson (1986-1994)<br>
+Rosalie Williams como Sra. Hudson (1984-1994)<br>
+Colin Jeavons como Inspector Lestrade (1984-1992)<br>
+Eric Porter como Profesor Moriarty (1985-1986)<br>
+Charles Gray como Mycroft Holmes (1985, 1988, 1994)</b><br>
+</p>
+
+<h2 ID="MISTERIO">LOS MISTERIOS DEL AUTENTICO HOLMES</h2>
+<hr class="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"LOS MISTERIOS DEL AUTENTICO SHERLOCK HOLMES"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/TMOSH.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>CANTIDAD EPISODIOS: 5<hr>
+PRODUCCION:BBC two<hr>
+TEMPORADAS:1<hr>
+ESTRENO:4 abril 2000 a 2 octubre 2001<hr>
+PROTAGONISTA:Ian Richardson<hr>
+PAÍS:Gran Bretaña<hr>
+DURACION:104 minutos
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt1333192/">LOS MISTERIOS DEL AUTENTICO SHERLOCK HOLMES</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCION</h3>
+
+<p>Los misterios del auténtico Sherlock Holmes (título original en inglés Murder Rooms: The Dark Beginnings of Sherlock Holmes) es una serie de televisión producida por la BBC (Reino Unido) y emitida entre los años 2000 y 2001. Está inspirada en el hecho de que el escritor creador de Sherlock Holmes, Arthur Conan Doyle, se basara para su personaje en su tutor durante sus estudios de medicina en la Universidad de Edimburgo, Joseph Bell, pionero de la ciencia forense y asesor ocasional de la policía.</p>
+
+<h3>REPARTO</h3>
+<p>El reparto de la serie es:<br>
+<b>Ian Richardson: Dr. Joseph Bell.<br>
+Robin Laing: Sir Arthur Conan Doyle. Capítulo 1.<br>
+Charles Edwards: Sir Arthur Conan Doyle. Capítulos 2-4.</b></p>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<h2 ID="SHERLOCK">"SHERLOCK"</h2>
+<hr class="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"SHERLOCK"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/sherlock.webp" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>CANTIDAD EPISODIOS: 13<hr>
+PRODUCCION:BBC ONE<hr>
+TEMPORADAS:4<hr>
+ESTRENO:25 julio 2010 a 15 enero 2017<hr>
+PROTAGONISTA:Benedict Cumberbatch y Martin Freeman<hr>
+PAÍS:Gran Bretaña<hr>
+DURACION:90 minutos
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt1475582/">SHERLOCK</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<h3>DESCRIPCIÓN</h3>
+
+<p>Sherlock es una serie de televisión británica que comenzó en 2010, realizada por la BBC y protagonizada por Benedict Cumberbatch y Martin Freeman. Coproducida por Hartswood Films y WGBH, la serie fue creada por Steven Moffat y Mark Gatiss (quienes escribieron un episodio cada uno). El cineasta Paul McGuigan dirigió el piloto y el tercer capítulo, mientras que Euros Lyn dirigió el segundo (escrito por Stephen Thompson). Se trata de una actualización contemporánea de las aventuras del detective Sherlock Holmes, creado por Arthur Conan Doyle. El rodaje tuvo lugar en varios lugares, entre ellos Londres y Cardiff.</p>
+
+<p>La primera temporada se transmitió en la BBC One y BBC HD entre julio y agosto de 2010. La recepción crítica fue, sobre todo, muy positiva. Estos episodios, junto con el piloto no emitido, se lanzaron en DVD y Blu-ray en el Reino Unido el 30 de agosto de 2010. La segunda temporada, de tres episodios de 90 minutos, comenzó a transmitirse en enero de 2012. La tercera temporada de tres episodios, parte de la cual (el desenlace de La caída de Reichenbach) se filmó al mismo tiempo que la segunda, se estrenó en el Reino Unido en enero de 2014. Tiempo después se lanzó un especial navideño (The Abominable Bride) donde se puede ver a Sherlock en el tiempo originario de los libros de Arthur Conan Doyle, creador del icónico personaje. En él se pueden notar cambios entre el tiempo actual y el tiempo de la era victoriana dándole al episodio un aspecto único. La cuarta temporada se transmitió en enero de 2017 y se insinuó que es la última, aunque no se ha llegado a confirmar de manera oficial.</p>
+
+<p>La serie es considerada por la critica una de las mejores series de todos los tiempos, estando en el puesto n°6 en IMDB y considerandose la mejor adaptación de Sherlock Holmes.</p>
+
+<h3>TRAMA</h3>
+
+<p>Ubicada en el Londres del siglo XXI, la serie sigue los pasos del excéntrico detective Sherlock Holmes junto a su compañero el doctor John H. Watson, en su búsqueda por resolver los brutales crímenes que se van desarrollando. Sus insuperables habilidades de deducción y su arrogante distanciamiento emocional le convierten en el perfecto detective, pero pronto descubrirá que hay alguien más que le sigue los pasos, el misterioso James Moriarty.</p>
+
+<p>Se puede ver al detective aggiornado al XXI d. C., es por eso que utiliza la tecnología, como por ejemplo el smartphone, iPad o internet. A pesar de tener estas nuevas características, lo que no cambia y es fiel al relato de Doyle es la incorporación de su compañero de aventuras, el Doctor John Watson, quien en esta oportunidad se lo muestra como un bloguero.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la serie es:<br>
+<b>Benedict Cumberbatch	- Sherlock Holmes<br>
+Martin Freeman	- John H. Watson<br>
+Rupert Graves	- Inspector Greg Lestrade<br>
+Mark Gatiss	- Mycroft Holmes<br>
+Andrew Scott	- James Moriarty<br>
+Amanda Abbington	- Mary Morstan / Mary Watson<br>
+Una Stubbs	- Sra. Hudson<br>
+Timothy Carlton	- Sr. Holmes<br>
+Wanda Ventham	- Sra. Holmes<br>
+Louise Brealey	- Molly Hooper<br>
+Tom Stoughton	- Sherlock niño<br>
+</b>
+</p>
+
+<h2 ID="ELEMENTARY">ELEMENTARY</h2>
+<hr class="separador">
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">"ELEMENTARY"</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="iamgenes tabla adaptaciones/ELEMENTARY.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>DETALLES</th>   
+</tr> 
+<tr>
+<td>CANTIDAD EPISODIOS: 154<hr>
+PRODUCCION:CBS<hr>
+TEMPORADAS:7<hr>
+ESTRENO:27 septiembre 2012 a 15 agosto 2019<hr>
+PROTAGONISTA:	Jonny Lee Miller y Lucy Liu<hr>
+PAÍS:Estados Unidos<hr>
+DURACION:41 minutos
+</td>
+</tr>
+<tr>
+<th>IMDB</th>
+</tr>
+<tr>
+<td><a href="https://www.imdb.com/es/title/tt2191671/">ELEMENTARY</a>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+<H3>DESCRIPCIÓN</H3>
+
+<p>Elementary es una serie de televisión estadounidense creada por Robert Doherty. Se estrenó en CBS el 27 de septiembre de 2012, y hasta la fecha se han emitido siete temporadas completas.</p>
+
+<h3>TRAMA</h3>
+
+<p>Se trata de una actualización contemporánea de las historias de Sherlock Holmes de Sir Arthur Conan Doyle, en la que el detective vive en los Estados Unidos, concretamente en la ciudad de Nueva York. La serie está protagonizada por Jonny Lee Miller, en el papel de Holmes, y Lucy Liu, en el de Joan Watson. Holmes es un consultor de Scotland Yard caído en desgracia que abandona Londres y se instala en Brooklyn, Estados Unidos, con el fin de rehabilitarse de su adicción a las drogas.</p>
+
+<p>Allí vivirá con su acompañante terapéutica de abstinencia, Joan Watson, una doctora con un pasado difícil que con su trabajo busca una oportunidad para ayudar a los demás. Ambos formarán un dúo que se encargará de resolver crímenes por toda la ciudad de Nueva York.</p>
+
+<p>Holmes contará también con el apoyo del capitán de policía Thomas 'Tommy' Gregson (Aidan Quinn), un experimentado investigador que valorará la capacidad de Holmes para resolver misterios. En busca de los criminales en la ciudad más importante del mundo, Holmes y Watson aprenderán a trabajar juntos, y pronto descubrirán que se necesitan el uno al otro para superar sus problemas y también los errores de su pasado.</p>
+
+<p>El 12 de mayo de 2018, CBS renovó la serie para una séptima temporada de 13 episodios. El 17 de diciembre de 2018, se anunció que la serie terminaría después de la séptima temporada.</p>
+
+<h3>REPARTO</h3>
+
+<p>El reparto de la serie es:<br>
+<b>Jonny Lee Miller es Sherlock Holmes<br>
+Lucy Liu es la doctora Joan Watson (la versión femenina del doctor John H. Watson)<br>
+Jon Michael Hill es el detective Marcus Bell<br>
+Aidan Quinn es el capitán Thomas Gregson</b><br></p>
+
+<p>REPARTO PRINCIPAL<br>
+<b>Ato Essandoh es Alfredo Llamosa<br>
+Candis Cayne es Sra. Hudson<br>
+Natalie Dormer es Eileen / Irene Adler / Jamie Moriarty<br>
+Rhys Ifans es Mycroft Holmes<br>
+Sean Pertwee es Gareth Lestrade<br>
+Ophelia Lovibond es Kitty Winter<br>
+Raza Jaffrey es Andrew Mittal<br>
+John Noble es Morland Holmes<br>
+Betty Gilpin es Fiona Helbron<br>
+Nelsan Ellis es Shinwell Johnson<br>
+Desmond Harrington es Michael Rowan</b><br>
+</p>
+</div>
+
+</div>
+</div>
+
+
+<div id="estructuratema2">
+<div style="text-align: end;">
+<a id="cambiarseccion"  href="BIOGRAFIA.html">SECCIÓN➡︎</a>
+</div>
+<div class="series">
+<div style="position:fixed;">
+<h3 id="indice">TEMAS</h3>
+<ul id="indiceserie">
+  <li><a href="#LRDSH">LOS RIVALES DE SHERLOCK HOLMES</a></li>
+  <li><a href="#EMDLM">EL MISTERIO DE LA MANSIÓN</a></li>
+  <li><a href="#AVENTURA">LAS AVENTURAS DE SHERLOCK HOLMES</a></li>
+  <li><a href="#MISTERIO">LOS MISTERIOS DEL AUTENTICO HOLMES</a></li>
+  <li><a href="#SHERLOCK">SHERLOCK</a></li>
+  <li><a href="#ELEMENTARY">ELEMENTARY</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+</div>
+
+<script>
+function mostrarContenido(tipo) {
+  localStorage.setItem('contenidoActivo', tipo);
+
+
+  const mensaje = document.getElementById('opcion');
+if (mensaje) {
+  mensaje.classList.add('ocultar');
+  setTimeout(() => mensaje.style.display = 'none', 500);
+}
+
+  const series = document.querySelectorAll('.series');
+  const peliculas = document.querySelectorAll('.peliculas');
+  const todos = [...series, ...peliculas];
+  todos.forEach(el => el.classList.remove('visible'));
+
+  setTimeout(() => {
+    todos.forEach(el => el.style.display = 'none');
+
+    const mostrar = tipo === 'series' ? series : peliculas;
+    mostrar.forEach(el => el.style.display = 'block');
+
+    setTimeout(() => {
+      mostrar.forEach(el => el.classList.add('visible'));
+    }, 10);
+  }, 500);
+
+  document.querySelectorAll('button').forEach(btn => btn.classList.remove('activo'));
+  const botonActivo = document.querySelector(`button[data-tipo="${tipo}"]`);
+  if (botonActivo) {
+    botonActivo.classList.add('activo');
+  }
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const tipoGuardado = localStorage.getItem('contenidoActivo');
+  if (tipoGuardado) {
+    mostrarContenido(tipoGuardado);
+  }
+});
+
+document.addEventListener("click", function(event) {
+
+  document.querySelectorAll("a").forEach(function(link) {
+    link.classList.remove("active");
+  });
+
+  if (event.target.tagName === "A") {
+    event.target.classList.add("active");
+  }
+});
+
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const subtemasListas = document.querySelectorAll(".subtema1");
+
+    subtemasListas.forEach((item) => {
+      const trigger = item.querySelector(".temas");
+      trigger.addEventListener("click", function () {
+        const subtemas = item.querySelector(".subtemas");
+        const isVisible = window.getComputedStyle(subtemas).display === "block";
+        subtemas.style.display = isVisible ? "none" : "block";
+      });
+    });
+  });
+</script>
+
+
+</body>
+
+
+</html>

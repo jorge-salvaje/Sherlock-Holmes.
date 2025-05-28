@@ -1,0 +1,801 @@
+<html>
+
+<head>
+
+<title>PERSONAJES</title>
+<style>
+body{
+margin:0;
+}
+#titulo{
+font-family:Poetsen One, sans-serif;
+text-align: center;
+font-size: 4rem;
+background-color: #496bac;
+margin:0;
+padding: 20px;
+}
+
+#encabezado{
+font-family: Poetsen One;
+text-align: center;
+font-size: 2rem;
+margin:0;
+padding: 10px;
+background-color: #b8cb16;
+}
+
+#contenedorprincipal{
+display: grid;  
+grid-template-columns: 1fr 4fr 1fr;
+grid-template-rows: auto;
+margin:0;
+gap: 30px color black;
+}
+
+h2{
+font-family:Cal Sans;
+font-size: 2.5rem;
+display: flex;
+justify-content: center;
+}
+
+p{
+font-family:Outfit;
+font-size: 1.5rem;
+}
+
+.wikitable {
+  border-collapse: collapse; 
+  width: 100%; 
+  margin: 0.5em 0; 
+  background-color: #fff; 
+  border: 1px solid #aaa; 
+}
+
+.wikitable th, .wikitable td {
+  border: 3px solid #545657; 
+  padding: 0.4em; 
+  text-align: left; 
+}
+
+.wikitable th {
+  background-color: #aceefb; 
+  font-weight: bold
+}
+
+h4{
+font-family:Abril Fatface, Libre Baskerville;
+outline: thick double; 
+width:70%;
+margin-left: 5px;
+}
+
+h3{
+font-family:Cal Sans;
+font-size: 2rem;
+display: flex;
+justify-content: center;
+}
+
+.temas{
+font-family: Outfit;
+margin-left: 0;
+list-style: none;
+font-size: 1.5rem;
+padding-left: 30px;
+padding-top: 10px;
+cursor: pointer;
+transition: color 0.3s;
+}
+
+.temas:before {
+content: "■";
+color: #000000;
+padding-right: 10px;
+}
+.temas:hover{
+background-color: #8a826c;
+padding: 5px;
+ transition: .5S;
+}
+
+.temas:active{
+background-color: #be9218;
+padding: 5px;
+}
+
+a {
+color:#78d9ff;
+font-family:Outfit, Sans-Serif;
+font-size:1.5rem;
+text-decoration: none;
+padding-left: 30px;
+}
+
+a:hover{
+    transition: .5S;
+background-color:#b8cb16;
+color:#271f1f;
+padding-left: 5px;
+}
+
+a:active{
+    transition: .5S;
+background-color:#e5ff00;
+color:#271f1f;
+padding-left: 5px;
+}
+
+#estructura_tema{
+background-color: #496bac;
+margin:0;
+border-right: 2px solid #000000;
+}
+
+#estructura_texto{
+background-color: #d3cfba;  
+margin:0;
+padding-left: 20px;
+padding-right: 20px;
+border-left: 2px solid #000000;
+border-right: 2px solid #000000;
+border-top:4px solid #000000;
+}
+
+
+#estructura_vacio{
+background-color: #496bac;  
+margin:0;
+border-left: 2px solid #000000;
+}
+
+.estructurasubtema .subtema1{
+cursor:pointer;
+
+}
+
+.estructurasubtema .subtema1.activo .subtemas{
+display:block;  
+}
+
+.estructurasubtema .subtemas{
+display: none;
+margin-left: 15px;
+
+}
+.subtemas{
+display: none;
+
+}
+.li{
+font-family: Outfit;
+margin-left: 0;
+list-style: none;
+font-size: 1rem;
+padding-left: 30px;
+padding-top: 10px;
+}
+
+.li:before {
+content: "■";
+color: #000000;
+padding-right: 10px;
+}
+
+
+#separador{
+border-color: #000000;
+}
+
+.active{
+background-color: #ffe600b9;
+
+}
+
+
+
+
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cal+Sans&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poetsen+One&family=Tagesschrift&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h2 id="titulo">PERSONAJES</h2>
+
+<div id="contenedorprincipal">
+
+<div id="estructura_tema">
+<a style="font-size: 3rem;color:#0a2937;" href="index.HTML">⬅︎VOLVER</a>
+<div style="position: fixed;">
+
+<h3>TEMAS</h3>
+<div class="estructura_subtema">
+
+<div class="subtema1" onclick="toggle(this)">
+<span class="temas">SHERLOCK HOLMES</span>
+<ul class="subtemas">
+<li><a href="#minititulo1">BIOGRAFIA</a></li>
+<li><a href="#minititulo2">ADAPTACIONES</a></li>  
+</ul>
+</div>
+<div class="subtema1" onclick="toggle(this)">
+<span class="temas">JOHN H. WATSON</span>
+<ul class="subtemas">
+<li><a href="#minititulo3">BIOGRAFIA</a></li>
+<li><a href="#minititulo4">PERSONALIDAD</a></li>    
+</ul>
+</div>
+<div class="subtema1" onclick="toggle(this)">
+<span class="temas">INSPECTOR LESTRADE</span>
+<ul class="subtemas">
+<li><a href="#minititulo5">BIOGRAFIA</a></li>
+<li><a href="#minititulo6">APARIENCIA</a></li>   
+ <li><a href="#minititulo7">ADAPTACIONES</a></li>    
+</ul>
+</div>
+<div class="subtema1" onclick="toggle(this)">
+<span class="temas">JIM MORIARTY</span>
+<ul class="subtemas">
+<li><a href="#minititulo8">BIOGRAFIA</a></li>
+<li><a href="#minititulo9">SEBASTIAN MORAN</a></li>   
+ <li><a href="#minititulo10">ADAPTACIONES</a></li>
+</ul>      
+</div>
+<div class="subtema1" onclick="toggle(this)">
+<span class="temas">SEBASTIAN MORAN</span>
+<ul class="subtemas">
+<li><a href="#minititulo11">BIOGRAFIA</a></li>
+<li><a href="#minititulo12">ADAPTACION</a></li>   
+</ul>
+</div>
+<div class="subtema1" onclick="toggle(this)">
+<span class="temas">MYCROFT HOLMES</span>
+<ul class="subtemas">
+<li><a href="#minititulo13">PERFIL</a></li>
+<li><a href="#minititulo14">ADAPTACION</a></li> 
+</ul>
+</div>
+<div class="subtema1" onclick="toggle(this)">  
+<span class="temas">IRENE ADLER</span>
+<ul class="subtemas">
+<li><a href="#minititulo15">PERFIL</a></li>
+<li><a href="#minititulo16">APARICIONES</a></li>
+<li><a href="#minititulo17">ADAPTACION</a></li>
+</ul>
+</div>
+<div class="subtema1" onclick="toggle(this)">  
+<span class="temas">MARY MORSTAN</span>
+<ul class="subtemas">
+<li><a href="#minititulo18">PERFIL</a></li>
+<li><a href="#minititulo19">APARICIONES</a></li>
+<li><a href="#minititulo20">ADAPTACION</a></li>  
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="estructura_texto">
+<h3 id="encabezado">Esta sección se tratará sobre los personajes más populares de SHERLOCK HOLMES y no tanto</h3>
+<h2 id="personaje">INTRODUCCION</h2>
+<hr id="separador">
+<p id="texto">En los libros de Sherlock Holmes, hay infinidad de personajes, unos son mas importantes que otros. No solo eso tambien con la infinidad de adaptaciones de este gran personaje, tambien hay diferencias con respecto a los libros o hasta personajes nuevos que no aparecian en los libros, como el "inspector Lestrade" en la serie de 2010 "Sherlock". Así que a continuacion apareceran los personajes mas importantes y no tanto, pero son curiosos de Sherlock Holmes, al igual que las diferencias en sus adaptaciones mas populares.</p>
+
+<h2 id="personajeSH">SHERLOCK HOLMES</h2>
+<hr id="separador">
+<p id="texto">El personaje homonimo a su obra, Sherlock Holmes, es un detective privado, es de origen ingles. Fue creado en 1887 por Sir Arthur Conan Doyle, protagonizando en total 62 historias, segun las historias nació el 6 de enero de 1854. Es conocido por su alta inteligencia y su razonamiento deductivo, al igual que la observación, que utiliza para resolver casos dificiles. Tambien es conocido por su excentricidad: toca el violin, fuma su pipa y ademas tiene una adiccion a la cocaina.</p>
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">SHERLOCK HOLMES</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="Imagenes tabla personajes/sherlock.jpg" width="260px"/></td>
+</tr>
+<tr>
+ <th>INFORMACION PERSONAL</th>   
+</tr> 
+<tr>
+<td>nombre:Sherlock Holmes<br><hr>         
+nacimiento: 1854<br><hr> 
+nacionalidad:britanico<br><hr>
+</td>
+<tr>
+ <th>FAMILIA</th>   
+</tr> 
+<td>
+familia:Mycroft holmes<br><hr>
+Sherrinford Holmes<br><hr>
+</td> 
+</tr>
+<tr>
+ <th>APARICION</th>   
+</tr> 
+<td>Primera aparicion:Estudio en escarlata(1887)<br><hr>
+ultima aparicion:Shoscombe Old Place(1927)
+</td> 
+</tbody> 
+</table> 
+</tbody> 
+</table>
+</div>
+
+<p id="texto">Sherlock Holmes, a quien en un principio Doyle tenía previsto llamar Sherrinford, es un detective asesor, alto, delgado, frío, irónico, ingenioso e intelectualmente inquieto. Su compañero, amigo y cronista el Dr. Watson, con quien nunca llega a tutearse (se llaman por el apellido), lo describe físicamente del siguiente modo al poco de conocerse:</p>
+
+<h4>"Su estatura sobrepasaba los seis pies, y era tan extraordinariamente enjuto, que producía la impresión de ser aún más alto. Tenía la mirada aguda y penetrante, [...] y su nariz, fina y aguileña, daba al conjunto de sus facciones un aire de viveza y de resolución."</h4>
+
+<p id="texto">El posee un gran conocimiento en muchos habitos, como los puede ser: es un experto apicultor, boxeador, gran conocimiento cientificco, especialmente en quimica, y cuando se aburre al no encontrar un reto intelectual consume cocaina, tiempo despues lo termina dejando por la insistencia de Watson.</p>
+
+<h3 id="minititulo1">BIOGRAFIA</h3>
+
+<p id="texto">Sherlock Holmes nació en 1854. Su padre era un hacendado inglés y su madre descendía de una estirpe de pintores franceses, entre ellos el ilustre Vernet, hermano de su abuela. Tiene dos hermanos: el primero es Mycroft, del cual Sherlock siempre ha dicho que es más listo que él pero que "no posee ninguna ambición ni energía"; lo que Sherlock entiende como un oficio -deducir cosas a partir de minúsculos detalles- Mycroft lo ve como un simple pasatiempo. Trabaja como coordinador general e informador interno de los asuntos del gobierno británico y es miembro ilustre del Club Diógenes. El segundo se llama Sherrinford, y es el mayor de los tres, aunque rara vez es mencionado y conocemos muy poco de él, aunque muchos expertos han confirmado su existencia dado que es muy probable que, dada la época, el primogénito se llamara igual que el padre: Sherrinford.</p>
+
+<p id="texto">Sherlock Holmes parece haber sido estudiante en la universidad, seguramente de las de Oxford o Cambridge donde cursaría algunas asignaturas de música y musicología,frenologia - algo con lo que no estaba del todo de acuerdo -preludio a lo que sería en el futuro la psiquiatría forense y el psicoanálisis, botánica, paleontología, esgrima, boxeo, barijutsu, jiujitsu, interpretación, literatura, idiomas, lenguas clásicas orientales, medicina, derecho, pero sobre todo, química. También es en la universidad donde comienza alguna labor como detective («La corbeta Gloria Scott») y donde comienza su faceta de actor, uniéndose al grupo universitario de teatro, hecho que le será muy útil a la hora interpretar los papeles que adopta al disfrazarse en algunos de sus casos. Tras realizar sus estudios se aloja cerca del Museo Británico para poder estudiar las ciencias necesarias para el desarrollo de su carrera posterior. Conoce a Watson en 1881, en el laboratorio del hospital Saint Bartholomew por un conocido en común con el objeto de compartir el piso del 221B de Baker Street. Rehúsa el título de caballero (sir), pero acepta la Legión de honor de forma totalmente discreta.</p>
+
+
+<h3 id="minititulo2">DIFERENCIA DE ADAPTACION</h3>
+
+<p id="texto">Hay diferencias en la serie "SHERLOCK" de 2010 (interpretado por el actor Benedict Cumberbatch), con los libros con respecto al personaje. En los libros la relación entre Sherlock y Watson es más la de un compañero y un confidente, con un vínculo basado en la admiración intelectual. Mientras que en la serie profundiza en la relación entre Sherlock y Watson, presentando una amistad más intensa y emocional, casi como una relación romántica.</p>
+
+<h2 id="personajeJHW">JOHN H. WATSON</h2>
+<hr id="separador">
+<p id="texto">John H. Watson, conocido como Doctor Watson, es un personaje ficticio que acompaña y asiste a Sherlock Holmes en gran parte de sus aventuras. Ambos personajes fueron creados por Arthur Conan Doyle y aparecieron por primera vez en la novela Estudio en escarlata, publicada por Conan Doyle en 1887, siendo esta novela la primera obra de Sherlock Holmes.</p>
+
+<h3 id="minititulo3">BIOGRAFIA</h3>
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">JHON H. WATSON</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="Imagenes tabla personajes/Watson.webp" width="260px"/></td>
+</tr>
+<tr>
+<th>INFORMACION PERSONAL</th>   
+</tr> 
+<tr>
+<td>nombre: Jhon H. Watson<br><hr>   
+nacimiento: 1852<br><hr> 
+nacionalidad: britanico<br><hr>
+</td>
+</tr>
+<tr>
+ <th>FAMILIA Y RELACIONES</th>   
+</tr> 
+<td>
+familia: Henry Jr. (hermano, fallecido)<br><hr>
+Henry Watson (padre, fallecido)<br><hr>
+Ella Mackenzie (madre, fallecida)<hr>
+conyuge:Mary Marston(1899-1900)<hr></td> 
+</tr>
+<tr>
+ <th>APARICION</th>   
+</tr> 
+<td>Primera aparicion:Estudio en escarlata(1887)<br><hr>
+ultima aparicion: Archivo de Sherlock Holmes
+</td> 
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<p id="texto">John H. Watson nació el 7 de agosto de 1852. Hijo de Henry Watson (nacido en Hampshire) y de Ella Mackenzie, John tenía un hermano llamado Henry Jr., quien aparentemente murió alcoholizado en 1888. Los Watson eran una familia de clase alta y respetada. La madre murió cuando él era apenas un niño y su padre se mudó a Australia, llevándose consigo a los dos hijos. Después de muchos años regresa a Inglaterra. En 1872 comenzó la carrera de Medicina en la Universidad de Oxford y se graduó en 1878. Continuó sus estudios en Netley, requisito indispensable para ser médico militar.</p>
+
+
+<p id="texto">Fue agregado como médico cirujano ayudante al 5° Regimiento de Fusileros de Northumberland. Este se hallaba de guarnición en la India, pero para cuando Watson llegó al país asiático, se había desatado la segunda guerra anglo-afgana, hacia donde se dirige para incorporarse a su escuadrón. En la batalla de Maiwand, agregado a las tropas del Berkshire, fue herido en el hombro izquierdo. Por este motivo, y por haber contraído tifus, es enviado de vuelta a Inglaterra para recuperarse.</p>
+
+<p id="texto">Se establece un tiempo en un importante hotel de Londres, del cual se ve obligado a mudarse en 1881 por falta de dinero. Por ese motivo encontró a Sherlock Holmes, quien ya había visto unas habitaciones que resultaban cómodas de pagar, a medias; las mismas pertenecían a la Sra. Hudson y se ubicaban en el 221B de Baker Street. Los presentó un amigo común, Stamford, que Watson conoció casualmente en su paso por el Hospital St. Bartholomew, mientras estudiaba Medicina. En 1884 viaja a Estados Unidos, donde conoce a la que sería su primera esposa, Constance Adams, con la cual se casa después de retornar a Inglaterra en 1886, y enviuda en 1887.</p>
+
+<p id="texto">En 1888 se casa con Mary Morstan (la conoce en el caso llamado El signo de los cuatro), quedando viudo por segunda vez en 1892. En 1902 se casa nuevamente.</p>
+
+<h3 id="minititulo4">PERSONALIDAD</h3>
+
+<p id="texto">Watson no es un hombre estúpido (él es, despues de todo, doctor en Medicina, y una persona cuyos talentos Holmes tiene en la mas alta estima), pero no posee la agudeza de Holmes. Sirve de complemento a Holmes: el hombre común contra la maquina analítica, brillante, sin sentimientos que Holmes puede llegar a ser. Con ambos personajes, Conan Doyle crea una pareja literaria muy inteligente: dos personajes vívidos, diferentes en sus funciones y sin embargo cada uno util en sus propositos. Watson es consciente de los limites de sus habilidades y la dependencia y confianza que Holmes tenía en él.</p>
+
+
+<h4 style="display:flex;justify-content: center;">«Holmes era un hombre de habitos [...] y yo era uno de esos habitos suyos [...] un compañero en cuyo temple el podía confiar hasta cierto punto [...] Yo era la piedra de afilar en la que se aguzaba su inteligencia. Lo estimulaba. [...] Si esa especie de lentitud metódica de mi mentalidad le irritaba, esa irritación servía unicamente para que sus llamaradas de intuicion y sus impresiones estallasen con mayor viveza y rapidez. Ese era mi humilde papel en nuestra alianza.»</h4>
+
+
+<p id="texto">Conan Doyle presenta a Watson como un individuo capaz y valiente, a quien Holmes no duda en llamar para apoyo moral y físico.</p>
+
+<p id="texto">Watson intenta, en ocasiones, resolver crímenes por su cuenta, aplicando los métodos de Holmes. Por ejemplo, en El sabueso de los Baskervilles, Watson resuelve eficientemente varios de los misterios que enfrentan, siendo felicitado calurosamente por Holmes por su celo e inteligencia. Sin embargo, y dado que no esta dotado con la habilidad de Holmes para concentrarse en los detalles esenciales del caso, se encuentra con resultados limitados en otros casos, mientras que Holmes remarca: "En efecto, usted ve, pero no observa". De cualquier manera, como hombre militar, Watson es el mejor estratega, mejorando a su amigo en el ajedrez, quien prefiere observar.</p>
+
+<p id="texto">Aunque inicialmente sus relaciones son de poco mas que compañeros de piso vagamente familiarizados el uno con el otro, ambos se transforman en mejores amigos, casi como hermanos. Para el tiempo de Los tres Garrideb Holmes tenía un cariño y apego tan grandes con su amigo, que casi entra en panico ante el pensamiento de que Watson hubiese recibido un disparo. Watson escribió:</p>
+
+<h4 style="display:flex;justify-content: center;">«Bien valía una herida, bien valían muchas heridas, el descubrir la profundidad de lealtad y amor que yacían debajo de esa fría máscara. Aquellos ojos claros y duros se nublaron por un instante, y sus firmes labios empezaron a temblar. Por una sola vez tuve la visión de un gran corazón, y también de un gran cerebro. Todos mis años de servicios humildes, sin reciprocidad, culminaron en aquel instante.»</h4>
+
+
+<p id="texto">Holmes vuelve a sí mismo solo despues de asegurarse de que Watson había sido solamente rasguñado por la bala, añadiendo al perpetrador que "si hubiese matado a Watson, no habría salido con vida de este cuarto.".</p>
+
+
+<h2 id="personajeIL">INSPECTOR LESTRADE</h2>
+<hr id="separador">
+<P id="texto">Lestrade es un detective decidido pero convencional de Scotland Yard que asesora a Holmes en numerosos casos y es el personaje policial más destacado de la serie. Lestrade ha sido interpretado por numerosos actores en adaptaciones de las historias de Sherlock Holmes en cine, televisión y otros medios.</P>
+
+<h3 id="minititulo5">BIOGRAFIA/HISTORIA</h3>
+
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">INSPECTOR LESTRADE</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="Imagenes tabla personajes/inspectorlestrade.webp" width="240px"/></td>
+</tr>
+<tr>
+<th>APARICION</th>   
+</tr> 
+<tr>
+<td>Primera aparicion: "Un estudio en escarlata"(1887)<hr>
+Última aparición: "La aventura de los tres Garrideb"(1924)<hr>
+</td>
+</tr>
+<tr>
+ <th>DATOS PERSONALES</th>   
+</tr> 
+<td>
+nacionalidad: britanico<br><hr>
+estatus: vivo<br><hr>
+oficio: inspector de policia<hr></td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<p id="texto">Lestrade menciona sus "veinte años de experiencia" en la policía en Estudio en Escarlata. En el relato, Holmes afirma que Lestrade es "un detective reconocido". Holmes observa que Lestrade y otro detective, Tobias Gregson , mantienen una rivalidad constante, y los identifica como "la joya de la corona. Ambos son rápidos y enérgicos, pero convencionales,sorprendentemente". Holmes suele permitir que los miembros de la policía se atribuyan el mérito de sus deducciones, incluyendo a Lestrade en casos como los de " La casa vacía "y " La aventura del constructor de Norwood ". Lestrade es capaz en taquigrafía.</p>
+
+
+<p id="texto">Al principio, Lestrade duda de los métodos de Holmes y sugiere que Holmes es demasiado propenso a la presunción en "La aventura del constructor de Norwood". Se muestra indiferente y desdeñoso con la exploración de Holmes en " El misterio del valle de Boscombe ". Holmes se muestra abiertamente grosero con Lestrade en ocasiones, como en "El misterio del valle de Boscombe" cuando le dice "recatadamente" que no es hábil para manejar los hechos y se refiere a Lestrade como un imbécil. En "El signo de los cuatro" , Holmes afirma que sentirse desorientado es normal para Lestrade (junto con los inspectores Gregson y Athelney Jones). Sin embargo, Holmes se muestra generalmente más positivo sobre Lestrade en historias posteriores. En " La aventura de la caja de cartón ", Holmes comenta que la tenacidad de Lestrade "lo ha llevado a la cima en Scotland Yard". En El sabueso de los Baskerville , dice que Lestrade es "el mejor de los profesionales" (refiriéndose a los profesionales empleados por Scotland Yard en contraposición a él mismo), y en la misma historia, Watson observa "por la forma reverencial en que Lestrade miraba a mi compañero que había aprendido mucho desde los días en que trabajaron juntos por primera vez".</p>
+
+<p id="texto">Para cuando transcurre el relato " La aventura de los seis Napoleones ", Lestrade es un visitante vespertino habitual del número 221B de Baker Street , y según Watson, "sus visitas eran bien recibidas por Sherlock Holmes". En el mismo relato, Lestrade revela la alta estima que ahora tiene Holmes en Scotland Yard: "En Scotland Yard no tenemos envidia de usted. No, señor, estamos muy orgullosos de usted, y si viene mañana, no hay hombre, desde el inspector más veterano hasta el agente más joven, que no esté encantado de estrecharle la mano". Holmes agradece a Lestrade este comentario, y Watson señala que este es uno de los pocos casos en los que Holmes se muestra visiblemente conmovido. En " La desaparición de Lady Frances Carfax ", Holmes se refiere a él como "amigo Lestrade". La participación de Lestrade en la investigación de " La aventura de los planos de Bruce-Partington " sugiere que se ha convertido en uno de los detectives más confiables de Scotland Yard.</p>
+
+<h3 id="minititulo6">APARIENCIA</h3>
+
+<p id="texto">El inspector Lestrade es descrito como "un hombrecillo cetrino, de cara de rata y ojos oscuros" en Estudio en escarlata . En " El misterio del valle de Boscombe ", Watson describe a Lestrade como "un hombre delgado, parecido a un hurón, furtivo y de aspecto astuto", y también dice: "A pesar del guardapolvo marrón claro y las polainas de cuero que vestía en deferencia a su entorno rústico, no tuve dificultad en reconocer a Lestrade, de Scotland Yard". Watson afirma que Lestrade es "tan fibroso, tan apuesto y tan parecido a un hurón como siempre" en " La aventura de la caja de cartón ". Se le describe como "un hombre pequeño, fibroso y con aspecto de bulldog" en El sabueso de los Baskerville , y hay una descripción de él con "rasgos de bulldog" en " La aventura de la segunda mancha ". Según Holmes en "El misterio del valle de Boscombe", las huellas de Lestrade se pueden identificar debido a la "torsión hacia adentro" de su pie izquierdo.</p>
+
+<h3 id="minititulo7">ADAPTACIONES</h3>
+
+<p id="texto">Lestrade tiene muchas diferencias de los libros con la serie "Sherlock" de 2010(interpretado por el actor Rupert Graves). En los libros es mas un colaborador, que se muestra sorprendido por las habilidades de Sherlock, mientras que en la serie se convierte en un aliado, incluso un amigo, y a veces hasta un competidor con Holmes en ciertas investigaciones. Ademas en los libros se describe a Lestrade como un oficial relativamente poco brillante y temeroso de Holmes, mientras que en la serie, se muestra mas seguro de sí mismo y con mas caracter.</p>
+
+<h2 id="personajeJJM">JAMES "JIM" MORIARTY</h2>
+<hr id="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">JIM MORIARTY</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="Imagenes tabla personajes/James_Moriarty.webp" width="240px"/></td>
+</tr>
+<tr>
+<th>APARICION</th>   
+</tr> 
+<tr>
+<td>Primera aparicion: "El problema final"(1893)<hr>
+Última aparición: "La aventura de la casa vacia"(1903)<hr>
+</td>
+</tr>
+<tr>
+ <th>DATOS PERSONALES</th>   
+</tr> 
+<td>
+nacionalidad: britanico<br><hr>
+estatus: muerto<br><hr>
+oficio: jefe del crimen<hr>
+profesor matemático<hr></td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<p id="texto">El profesor James Moriarty es un personaje ficticio creado por Arthur Conan Doyle en 1893 como el enemigo de Sherlock Holmes. Moriarty es un genio criminal al que Holmes describe como "el Napoleón del crimen". Doyle tomó la frase de un inspector de Scotland Yard referida a Adam Worth, una de las inspiraciones reales del personaje de Moriarty. El personaje fue introducido principalmente como un recurso argumental para permitir a Conan Doyle matar a Sherlock Holmes y poner fin a las aventuras del detective, y solo aparece en dos historias de Holmes. Sin embargo, en muchas adaptaciones se le ha dado un papel mucho más importante hasta convertirlo en el archienemigo de Holmes.</p>
+
+<h3 id="minititulo8">BIOGRAFIA</h3>
+
+<P ID="texto">El poder terrorífico del profesor se puede deber al hecho de que se trata de la imagen especular de Holmes: es el hombre en el que el detective podría haberse convertido si hubiera escogido el camino siniestro. Moriarty es la versión escalofriante del propio Holmes. Ambos tienen la frente alta y la mirada penetrante, aunque en el caso de Moriarty todo es más exagerado. Alto y delgado, con los ojos hundidos y una barbilla prominente, su cabeza oscila "lentamente de un lado a otro de un modo curiosamente reptilesco". Moriarty procede de una familia privilegiada y recibió una excelente educación. Naturalmente dotado para las matemáticas, a la edad de 21 años escribió un tratado de álgebra que cosechó elogios por toda Europa. También fue elogiado por su brillante volumen acerca de la dinámica de los asteroides que, como señala Holmes, es tan avanzado que "no había nadie en la prensa científica capaz de criticarlo". Respaldado por estas obras, Moriarty se convirtió en profesor de matemáticas en una universidad inglesa. Fue entonces cuando comenzaron a circular rumores acerca de él y es por esto por lo que viaja a Londres, donde se convierte en un entrenador militar. Más adelante se da a conocer que Sebastian Moran era el principal cómplice de Moriarty.[1]​Moriarty se convirtió en la mente maestra del hampa, empleando su prodigioso intelecto para controlar una vasta red criminal, la mayor jamás vista, permaneciendo invisible en su núcleo, totalmente libre de sospechas, como el profesor Moriarty, famoso matemático. "Como una araña", movía sus hilos, era "la mente organizativa de la mitad de los hechos depravados de los que se tiene conocimiento y de casi todos lo que pasan desapercibidos en Londres". La genialidad de los planes de Moriarty hace que nadie sea capaz de averiguar la fuente de sus ganancias criminales, ya se trate de robo, extorsión o falsificación. Holmes lo compara con Jonathan Wild, quien, en el siglo XVIII, era un genio del crimen.</P>
+
+<p id="texto">Holmes describe a Moriarty así:</p>
+
+<h4 style="display:flex;justify-content: center;">"Es un hombre de buen nacimiento y excelente educación, dotado por la naturaleza con una fenomenal habilidad matemática. A la edad de 21 años escribió un tratado sobre el teorema del binomio que ha tenido éxito en Europa. En virtud de ello, ganó la cátedra en matemáticas en una de nuestras universidades más pequeñas y tenía todos los aspectos de una carrera más brillante delante de él. Pero el hombre tenía tendencias hereditarias de la clase más diabólica. Una cepa criminal corría en su sangre, lo cual, en lugar de ser modificado, fue aumentado y lo hizo infinitamente más peligroso por sus extraordinarios poderes mentales. Oscuros rumores se reunieron alrededor de él en la ciudad universitaria, y finalmente se vio obligado a renunciar a su cátedra y venir a Londres."</h4>
+
+
+<h3 id="minititulo9">SEBASTIAN MORAN</h3>
+
+<p id="texto">Sebastian Moran es la mano derecha del profesor Moriarty en su red criminal. Es presentado en la aventura de la casa vacía, donde era amigo personal de Moriarty y temido en prácticamente toda África, cazador de todas las criaturas conocidas y un tirador excepcional. También tenía acceso a todo tipo de armas avanzadas, como rifles de aire presurizado y armas ocultas en artefactos cotidianos, y era él quien se las proporcionaba al profesor. Es descrito por Watson como un hombre de edad avanzada con una calva y un gran bigote blanco, alto y delgado.
+
+Es quien aparentemente manejaría la red del mal después de la muerte de Moriarty, pero, al tanto de Holmes, lo intenta asesinar en Baker Street. Sin embargo falla, es capturado por él y Watson y entregado a Scotland Yard, abandonando el puesto como criminal más buscado de Inglaterra.</p>
+
+<h3 id="minititulo10">ADAPTACIONES</h3>
+
+<p id="texto">En la serie "Sherlock de 2010, Jim Moriarty es una versión modernizada y psicópata del Profesor Moriarty de los libros de Sir Arthur Conan Doyle(interpretada por el actor Andrew Scott). En los libros, Moriarty es presentado como un genio criminal demente, mientras que en la serie, Jim Moriarty es un personaje excéntrico, sádico y astuto, con una interpretación que se considera más "divertida". Ademas en la serie tiene muchas mas apariciones y juega un papel crucial en la trama de la serie, mientras que en los libros aparece solo en 2 historias:"el problema final" y "la aventura de la casa vacia.</p>
+
+<h2 id="personajesSM">SEBASTIAN MORAN</h2>
+<hr id="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">SEBASTIAN MORAN</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="Imagenes tabla personajes/coronelsebastianmoran.webp" width="240px"/></td>
+</tr>
+<tr>
+<th>APARICION</th>   
+</tr> 
+<tr>
+<td>Primera aparicion: "La aventura de la casa vacia"(1903)<hr>
+Última aparición: "Su ultimo saludo en el escenario"(1917)<hr>
+</td>
+</tr>
+<tr>
+ <th>DATOS PERSONALES</th>   
+</tr> 
+<td>
+nacimiento: 1840<hr>
+nacionalidad: britanico<br><hr>
+estatus: muerto<br><hr>
+oficio: coronel<hr></td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<p id="texto">El coronel Sebastian Moran es un personaje ficticio creado por Arthur Conan Doyle. Enemigo de Sherlock Holmes, aparece por primera vez en el relato de 1903 La casa deshabitada. Holmes lo describió una vez como "el segundo hombre más peligroso de Londres", siendo el más peligroso el profesor Moriarty, el jefe de Moran.</p>
+
+<h3 id="minititulo11">BIOGRAFIA</h3>
+
+<P ID="texto">Sebastian Moran nació en Londres en 1840, hijo de Sir Augustus Moran, CB, en algún momento ministro de Persia.</P>
+
+<p id="texto">Fue educado en Eton College y la Universidad de Oxford antes de embarcarse en una carrera militar. Fue uno de los primeros pioneros de Bangalore (Madras), sirvió en la Expedición Jowaki de 1877-1878 y en la segunda guerra anglo-afgana, viendo acción en la Batalla de Charasiab, el 6 de octubre de 1879; la batalla de Sherpur, el 23 de diciembre de 1879; y en Kabul.</p>
+
+<p id="texto">Un deportista devoto y un tirador muy hábil, fue autor de los libros Heavy Game of the Western Himalayas en 1881 y Three Months in the Jungle en 1884, y al parecer una vez "se arrastró por un desagüe tras un tigre herido devorador de hombres". Después de la guerra Anglo-Afgana, fue dado de baja deshonrosamente y más tarde se convirtió en un sicario a sueldo. Con el tiempo, el profesor James Moriarty lo contrató para realizar su trabajo sucio emprendiendo varios asesinatos. Exteriormente respetable, con una dirección en Conduit Street, Mayfair, y miembro del (ficticio) Anglo-Indian Club, el Tankerville Club y el Bagatelle Card Club, fue reclutado por el profesor Moriarty y se desempeñó como su jefe de personal. En última instancia, se utiliza únicamente para asesinatos que requirieran su peculiar habilidad con el rifle; Holmes menciona el asesinato de una Sra. Stuart en 1887 en el que sospecha (pero no puede probar) que Moran estuvo involucrado. En El problema final (ambientada en 1891), Moran escapó de la incriminación y siguió al profesor a las cataratas de Reichenbach, donde Moran intentó matar a Holmes haciendo rodar rocas sobre él.</p>
+
+<p id="texto">A partir de entonces, Moran se ganó la vida en Londres jugando a las cartas en varios clubes. Cuando uno de los otros jugadores, Ronald Adair, notó que Moran ganó haciendo trampas y amenazó con denunciarlo, Moran asesinó a Adair con un rifle de aire con silenciador que disparaba balas de revólver. El Dr. Watson y Holmes participaron en el caso, Moran intentó matar a Holmes disparando el rifle de aire desde una casa vacía frente a la residencia del detective. Habiendo anticipado Holmes esto, Moran disparó a una efigie de cera del detective, mientras que Holmes, Watson y el inspector Lestrade se escondieron cerca para capturarlo.</p>
+
+<p id="texto">En El cliente ilustre, Holmes menciona a Moran como aún vivo (en septiembre de 1902). Moran también es mencionado en Su último saludo en el escenario como un ejemplo de los muchos adversarios de Holmes que han jurado venganza en vano contra él.</p>
+
+<p id="texto">El coronel Sebastian Moran también fue el villano en la obra de Sherlock Holmes de Doyle, The Crown Diamond, escrita a principios de la década de 1900, pero que no se representó hasta 1921. Cuando esta obra se adaptó como relato en La piedra de Mazarino, Moran fue reemplazado por el 'Conde Negretto Sylvius'.</p>
+
+<h3 id="minititulo12">ADAPTACION</h3>
+
+<p id="texto">Sebastian Moran, no aparece en la serie de "Sherlock" de 2010, pero si aparece en la pelicula "Sherlock Holmes: Juego de sombras" de 2011(interpretado por el actor Paul Anderson). En los libros se describe a Moran como un hombre de edad avanzada, alto y delgado, calvo y con un bigote blanco. Ademas era un oficial del ejercito, con una excelente punteria, siendo la mano derecha de Moriarty, tambien utiliza su inteligencia y habilidades de forma calculada. En la pelicula se lo muestra mas joven y menos experimentado, es presentado como un pistolero a sueldo que utiliza una variedad de armas, incluyendo dardos envenenados. Tambien es mostrado como mas impulsivo y agresivo, utilizando la fuerza bruta en vez de la astucia y la estrategia. </p>
+
+<h2 id="personajeMH">MYCROFT HOLMES</h2>
+<hr id="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">MYCROFT HOLMES</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="Imagenes tabla personajes/mycroft.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>APARICION</th>   
+</tr> 
+<tr>
+<td>Primera aparicion: "El interprete griego"(1893)<hr>
+Última aparición: "Los planos del Bruce-Partington"(1908)<hr>
+</td>
+</tr>
+<tr>
+<th>FAMILIA</th>
+</tr>
+<tr>
+<td>Hermano: Sherlock Holmes
+</td>
+</tr>
+<tr>
+ <th>DATOS PERSONALES</th>   
+</tr> 
+<td>
+nacimiento: 1 de octubre de 1847<hr>
+nacionalidad: britanico<br><hr>
+estatus: vivo<br><hr>
+oficio: alto cargo del gobierno britanico<hr></td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<p id="texto">Mycroft Holmes es el hermano mayor de Sherlock Holmes. Sus poderes de observación y deducción son mayores que los de su hermano, pero carece de la energía e inclinación a usarlos que tiene Sherlock.</p>
+
+<h3 id="minititulo13">PERFIL</h3>
+
+<p id="texto">Mycroft, siete años mayor que Sherlock y muy parecido físicamente, si bien notoriamente más alto y voluminoso, posee poderes de deducción que incluso superan a los de su hermano, sin embargo no se dedica al trabajo de detective porque es incapaz de hacer el esfuerzo físico necesario para llegar a la conclusión de los casos. Así le describe su hermano:</p>
+<div style="overflow: hidden;word-wrap: break-word;">
+<h4 style="display:flex;justify-content: center;">"He dicho que es superior a mí en observación y deducción. Si el arte del detective comenzara y terminara en el razonamiento desde una butaca, mi hermano sería el mayor criminólogo que jamás haya existido. Pero no tiene ambición ni energía. Ni siquiera se desvía de su camino para verificar sus soluciones, y preferiría que se le considerase equivocado antes que tomarse la molestia de probar que estaba en lo cierto. Repetidas veces le he presentado un problema y he recibido una explicación que después ha demostrado ser la correcta. Y sin embargo, es totalmente incapaz de elaborar los puntos prácticos que deben dilucidarse antes de poder presentar un caso ante un juez o un jurado". Conan Doyle, El intérprete griego, 1893</h4>
+</div>
+<p id="texto">Sus movimientos diarios se reducen al trayecto entre sus habitaciones, el Club Diógenes que él mismo cofundó y su trabajo en la administración británica. Su posición en el gobierno no queda clara, pero es de vital importancia, como describe Sherlock Holmes:</p>
+<div style="overflow: hidden;word-wrap: break-word;">
+<h4 style="display:flex;justify-content: center;">"Es preciso ser discreto cuando uno habla de los altos asuntos del Estado. Acierta usted con lo que está bajo el Gobierno británico. También acertaría en cierto sentido si dijese que, de cuando en cuando, el Gobierno británico es él. (...) Ocupa una posición única, que él mismo se ha creado. Hasta entonces no había nada que se le pareciese si volviera a haberlo. Mi hermano tiene el cerebro más despejado y más ordenado, con mayor capacidad para almacenar datos, que ningún otro ser viviente. Las mismas facultades que yo he dedicado al descubrimiento del crimen, él las ha empleado en esa otra actividad especial. Todos los departamentos ministeriales le entregan a él conclusiones, y él es la oficina central de intercambio, la cámara de compensación que hace el balance. Todos los demás hombres son especialistas en algo, pero la especialidad de mi hermano es saber de todo. Supongamos que un ministro necesita datos referentes a un problema que afectaba a la Marina, a la India, al Canadá y a la cuestión del bimetalismo; él podría conseguir los informes por separado de cada uno de los departamentos y sobre cada problema, pero únicamente Mycroft es capaz de enfocarlos todos, y de enviarle inmediatamente un informe sobre cómo cada uno de esos factores repercutiría en los demás. Empezaron sirviéndose de él como de un atajo, de una comodidad; ahora ha llegado a convertirse en cosa fundamental. Todo está sistemáticamente archivado en aquel gran cerebro suyo, y todo puede encontrarse y servirse en el acto. Una vez y otra han sido sus palabras las que han decidido la política nacional. Eso constituye para él su vida". Arthur Conan Doyle, Los planos del "Bruce-Partington", 1908.</h4>
+</div>
+<p id="texto">Mycroft aparece o es mencionado en cuatro historias: El intérprete griego, El problema final, La casa deshabitada y Los planos del Bruce-Partington. El personaje es siempre un investigador sedentario, pasivo e indolente, que soluciona los casos basándose en ninguna prueba aparente y confiando en Sherlock para los detalles prácticos. De hecho, la absoluta falta de práctica de Mycroft a pesar de sus poderes deductivos está a punto de costar la vida al cliente de El intérprete griego.</p>
+
+<h3 id="minititulo14">ADAPTACIONES</h3>
+
+<p id="texto">Mycroft Holmes aparece en la serie "Sherlock" de 2010 (interpretado por el actor "Mark Gattis"), tiene una serie de diferencias en la serie con respecto a los libros. En la serie Mycroft tiene un puesto de nivel alto en el gobierno, es una figura influyente que utiliza su poder para manipular eventos y ayudar a Sherlock.Mycroft ve a Sherlock como un instrumento útil, un recurso que puede utilizar para fines propios, y a menudo lo manipula para obtener información y ayuda, ademas tiene mucha mas presencia que en los libros, apareciendo en practicamente todos los episodios. En los libros Mycroft es un hombre de Estado, pero su papel en el gobierno es menos definido, y su influencia es mas limitada, ademas Sherlock considera a Mycroft más inteligente que él, pero también lo ve como un hombre indolente y pasivo, que no está interesado en la aventura.</p>
+
+<h2 id="personajeIA">IRENE ADLER</h2>
+<hr id="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">IRENE ADLER</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="Imagenes tabla personajes/Irene.jpg" width="200px"/></td>
+</tr>
+<tr>
+<th>APARICION</th>   
+</tr> 
+<tr>
+<td>Primera aparicion: "Un escandalo en Bohemia"(1891)<hr>
+Mencionada en otras historias<hr>
+</td>
+</tr>
+<tr>
+<th>FAMILIA</th>
+</tr>
+<tr>
+<td>Marido: Godfrey Norton
+</td>
+</tr>
+<tr>
+ <th>DATOS PERSONALES</th>   
+</tr> 
+<td>
+nacimiento: 1858<hr>
+nacionalidad: estadounidense (Nueva Jersey)<br><hr>
+estatus: muerto<br><hr>
+oficio: cantante de ópera<hr></td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<p id="texto">Irene Adler (Irene Norton de casada) es un personaje aparecido en la historia "Escándalo en Bohemia" publicada en 1891. Es uno de los personajes femeninos más notables de las historias de Sherlock Holmes, a pesar de aparecer una única vez. Es apodada como "La mujer".</p>
+
+<h3 id="minititulo15">BIOGRAFIA</h3>
+
+<p id="texto">El doctor Watson se refiere a ella en el original como "The Late Irene Adler", que se traduciría como "la fallecida Irene Adler" en el momento de publicación de la historia "Escándalo en Bohemia". Las razones de su muerte no se cuentan, no obstante, se especula que la razón estaba relacionada con su salud. También es posible que la otra acepción de Late, sea Former (antiguamente). Se casó con Godfrey Norton, lo que hace de Adler su antiguo apellido.</p>
+
+<p id="texto">El 20 de marzo de 1888, el rey de Bohemia hace un viaje de incógnito a Baker Street para visitar a Sherlock Holmes y pedirle que recuperase una foto en posesión de Adler.</p>
+
+<p id="texto">El rey vivía en Praga en 1883, y pasó una visita a Varsovia, donde conoció a Adler. Se hicieron amantes, y desde entonces, ella guardó una foto de ambos juntos. El rey explica a Holmes que va a casarse, boda que podría acabar mal si su relación con Adler salía a la luz.</p>
+
+<p id="texto">Usando sus habilidades, Holmes llega hasta Adler, aprendiendo mucho de su vida privada. Simuló un accidente con la intención de entrar en la casa, para encontrarse con que la foto ya no estaba. En su lugar encontró una carta de Adler hacia él, diciendo que le había reconocido, pero que no se preocupase por la foto, asegurando que no intentaría nada con ella en el futuro.</p>
+
+<h3 id="minititulo16">APARICIONES</h3>
+
+<p id="texto">"Escándalo en Bohemia" es el único relato en que aparece Adler, pero es mencionada en varios otros. En "Las cinco semillas de naranja" Holmes menciona que sólo ha perdido cuatro veces, tres contra un hombre y una contra una mujer. Según la cronología, esta aventura es anterior a "Escándalo en Bohemia", y por tanto no podría conocer a Adler, podría ser un error de Doyle, ya que "Las cinco semillas de naranja" se publicó después de "Escándalo en Bohemia". En "Un caso de identidad" John menciona que Adler es la única persona que ha conocido que ha derrotado a Holmes.</p>
+
+<p id="texto">También se menciona en "El carbunclo azul" y "Su último saludo en el escenario".</p>
+
+<h3 id="minititulo17">ADAPTACIONES</h3>
+
+<p id="texto">Irene adler aparece en la serie "Sherlock" de 2010 (interpretada por la actriz "Laura Pulver"), tiene unas cuantas diferencias con respecto a los libros. En la serie Irene Adler es presentada como una mujer ingeniosa y capaz, con una personalidad propia y no solo como un objeto de interés para Holmes, tambien tiene una relacion compleja con Sherlock. Ademas su presencia en la serie es más recurrente y su impacto en la trama es más significativo, como en el episodio "Un escándalo en Belgravia". En los libros Irene Adler es la "Mujer" que logra engañar a Holmes en "Un escándalo en Bohemia", lo que lo sorprende y lo hace reflexionar. Ademas su papel en la historia es más limitado y su influencia en la trama es menor.</p>
+
+<h2 id="personajeMM">MARY MORSTAN</h2>
+<hr id="separador">
+<div style="float:right;font-family:Outfit;" >
+<table class="wikitable sortable">
+<thead>
+<tr>
+<th style="padding: 12px;text-align: center;">MARY MORSTAN</th>
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td style="text-align:center;"><img src="Imagenes tabla personajes/Mary.webp" width="200px"/></td>
+</tr>
+<tr>
+<th>APARICION</th>   
+</tr> 
+<tr>
+<td>Primera aparicion: "El signo de los cuatro"(1890)<hr>
+mencionada en: "La casa deshabitada"(1903)<hr>
+</td>
+</tr>
+<tr>
+<th>FAMILIA</th>
+</tr>
+<tr>
+<td>Padre: Arthur Morstan<hr>
+Marido: John Watson<hr>
+</td>
+</tr>
+<tr>
+ <th>DATOS PERSONALES</th>   
+</tr> 
+<td>
+nacimiento: 1871<hr>
+fallecimiento: 1891-1894<hr>
+nacionalidad: britanica<br><hr>
+estatus: muerta<br><hr>
+oficio: desconocido<hr>
+</td>
+</tr>
+</tbody> 
+</table> 
+</tbody>                                                
+</table>
+</div>
+
+<p id="texto">Mary Watson (Morstan de soltera) es la esposa de John Watson. Apareció por primera vez en El signo de los cuatro, y es el personaje central de esa historia. Por lo general no está envuelta en el resto de historias.</p>
+
+<h3 id="minititulo18">BIOGRAFIA</h3>
+
+<p id="texto">El padre de Mary, Arthur Morstan, era oficial de un regimiento indio. Su madre murió cuando ella era joven, y el capitán Morstan envió a Mary de vuelta a Gran Bretaña para que recibiera educación. Como no tenía familia en el país, Mary fue internada en un internado en Edimburgo, donde permaneció hasta los diecisiete años.</p>
+
+<p id="texto">A finales de 1878, el capitán Morstan recibió un permiso de doce meses y regresó a Inglaterra para ver a su hija. Le pidió a Mary que se reuniera con él en Londres. Sin embargo, al llegar a su hotel, se enteró de que no lo habían visto desde la noche anterior; de hecho, nunca más lo volvieron a ver. Su desaparición sería clave para el misterio de El signo de los cuatro.</p>
+
+<p id="texto">Watson y Morstan se enamoran a lo largo de la historia. Watson oculta inicialmente sus sentimientos por Morstan porque ella heredará una fortuna, y considera inapropiado y poco ético cortejarla considerando sus perspectivas financieras en comparación con las suyas. Cuando el tesoro se pierde, ambos admiten sentir alivio y confiesan su amor. Mary Morstan recibe una rosa y doce valiosas perlas de Thaddeus Sholto.</p>
+
+<p id="texto">Murió en un momento no especificado entre "El problema final" y "La casa deshabitada", pues Holmes menciona brevemente su fallecimiento en esta última. La viudez de Watson influye ocasionalmente en sus relatos posteriores sobre las hazañas de su amigo.</p>
+
+<h3 id="minititulo19">APARIENCIA</h3>
+
+<p id="texto">John Watson la describe como "una joven rubia, menuda, delicada, bien enguantada y vestida con el más exquisito gusto. Su rostro no tenía rasgos regulares ni belleza de tez, pero su expresión era dulce y amable, y sus grandes ojos azules eran singularmente espirituales y comprensivos".</p>
+
+<h3 id="minititulo20">ADAPTACIONES</h3>
+
+<P ID="texto">Mary Morstan aparece en la serie "Sherlock" de 2010 (interpretada por la actriz "Amanda Abbington"), posee importantes diferencias con respecto a los libros. En los libros Mary Morstan es inicialmente una joven dama que acude a Sherlock Holmes por un problema relacionado con un tesoro perdido. Se enamora y se casa con Watson. Su papel es mas el de una esposa y compañera, apoyando a Watson. En la serie es presentada como una ex-agente, ademas se explora la relación entre Mary y Sherlock, mostrando su capacidad para detectar la verdad en sus mentiras y la protección que siente hacia ellos. Mary tiene un papel más activo en la trama, incluso en la serie, y a menudo se encuentra involucrada en situaciones peligrosas. </P>
+</div>
+<div id="estructura_vacio"></div>
+</div>
+
+<script>
+ function toggle(element) {
+  const subtemas = element.querySelector('.subtemas');
+  const currentDisplay = window.getComputedStyle(subtemas).display;
+
+  if (currentDisplay === 'block') {
+    subtemas.style.display = 'none';
+  } else {
+    subtemas.style.display = 'block';
+  }
+}
+</script>
+
+</body>
+
+</html>
