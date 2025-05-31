@@ -2,6 +2,8 @@
 
 <head>
 <title>BIOGRAFIA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 #BIOGRAFIA {
 font-family:Oswald;
@@ -19,6 +21,8 @@ margin:0;
 font-size: 2rem;
 text-align: center;
 padding:10px;
+  margin-top: 0;
+        margin-bottom: 0;
 }
 
 body{
@@ -103,7 +107,108 @@ background-color: #c5733086;
 padding-left: 30px;
 }
 
+ #botonTemas {
+  display: none;
+  width: 140px;
+  height: 48px;
+  background-color: rgba(55, 118, 135, 0.8);
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+}
 
+
+    @media (max-width: 768px) {
+      #botonTemas {
+        display: block;
+      }
+    }
+
+    
+#menuTemas {
+  background-color: #3090aad5; 
+  padding: 10px;
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  border: 2px solid #000;
+  border-radius: 4px;
+  max-height: 0;
+  min-height: 50px; 
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 2;
+  visibility: hidden;
+      width: 80%; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 0 auto; 
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+#menuTemas.visible {
+  opacity: 1;
+  visibility: visible;
+  max-height: 400px;
+  min-height: auto;
+  position:fixed;
+}
+    #menuTemas h3 {
+      margin: 0 0 8px 0;
+      font-family: Outfit, sans-serif;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    #menuTemas ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #menuTemas li + li {
+      margin-top: 8px;
+    }
+
+    #menuTemas li a {
+      display: block;
+      padding: 6px 10px;
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    #menuTemas li a:hover {
+      background-color: #8ed8c1c9;
+      color: #271f1f;
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+
+      #estructuratema {
+        display: none;
+      }
+
+
+      #contenedorprincipal {
+        grid-template-columns: 1fr;
+    
+      }
+    }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -115,12 +220,13 @@ padding-left: 30px;
 
 <body>
 <h2  id="BIOGRAFIA"> BIOGRAFIA</h2>
+<button id="botonTemas">Temas</button>
 
-<div id="contenedorprincipal">
 
-<div id="estructuratema">
-<a style="font-size: 3rem;color:#0a2937;" href="index.html">⬅︎VOLVER</a>
-<div style="position:fixed;">
+
+
+<div id="menuTemas">
+
 <h3 id="temas1">TEMAS</h3>
 <ul style="padding-right: 20px;">
 <li><a href="#infancia">INFANCIA</a></li>
@@ -135,8 +241,28 @@ padding-left: 30px;
 <li><a href="#espiritismo">ESPIRITISMO</a></li>
 </ul>
 </div>
-</div>
+
+<div id="contenedorprincipal">
+<div id="estructuratema">
+      <a href="index.html" style="font-size: 3rem; color: #0a2937; display: block; text-align: center; margin-bottom: 16px;">⬅︎ VOLVER</a>
+      <div style="position: fixed;">
+      <h3 id="temas1">TEMAS</h3>
+      <ul>
+        <li><a href="#infancia">INFANCIA</a></li>
+        <li><a href="#escuela">ESCUELA</a></li>
+        <li><a href="#universidad">UNIVERSIDAD</a></li>
+        <li><a href="#practica-medica">PRÁCTICA MÉDICA</a></li>
+        <li><a href="#primer-matrimonio">PRIMER MATRIMONIO</a></li>
+        <li><a href="#celebridad">CELEBRIDAD</a></li>
+        <li><a href="#guerra-boer">GUERRA DE LOS BOÉRS</a></li>
+        <li><a href="#segundo-matrimonio">SEGUNDO MATRIMONIO</a></li>
+        <li><a href="#guerramundial">1ERA GUERRA MUNDIAL</a></li>
+        <li><a href="#espiritismo">ESPIRITISMO</a></li>
+      </ul>
+    </div>
+    </div>
 <div id="estructuratexto">
+ 
 <h3 id="ENCABEZADO">En esta seccion de la página hablaré sobre la biografia del creador de todo esto basicamente, "Sir Arthur Conan Doyle"</h3>
 <img style="float:right;border-color:2654a9;padding:40px;width:16%;"src="imagenes biografia/sir-arthur-conan-doyle.jpg"/>
 
@@ -240,6 +366,7 @@ padding-left: 30px;
 </div>
 <div id="estructura_vacia"></div>
 </div>
+</body>
 <script>
 document.addEventListener("click", function(event) {
 
@@ -251,8 +378,28 @@ document.addEventListener("click", function(event) {
     event.target.classList.add("active");
   }
 });
+
 </script>
 
+<script>
+const botonTemas = document.getElementById("botonTemas");
+const menuTemas = document.getElementById("menuTemas");
 
+botonTemas.addEventListener("click", () => {
+  menuTemas.classList.toggle("visible");
+});
+
+
+
+window.addEventListener("scroll", () => {
+  const biografia = document.getElementById("BIOGRAFIA").getBoundingClientRect().bottom;
+
+  if (biografia <= 16) {
+    botonTemas.style.position = "fixed";
+    botonTemas.style.bottom = "16px";  
+    botonTemas.style.right = "16px";  
+  }
+});
+</script>
 </body>
 </html>
