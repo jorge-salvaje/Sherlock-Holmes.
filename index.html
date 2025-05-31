@@ -197,6 +197,94 @@ transform: translateY(-5px);
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  #titulo {
+    font-size: 4.5rem; 
+    padding: 40px 0;
+  }
+  
+  #categorias {
+    column-count: 5; 
+    font-size: 3rem;
+  }
+
+  #mensaje-inicial {
+    font-size: 2rem;
+    padding: 50px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  #titulo {
+    font-size: 3rem; 
+    padding: 30px 0;
+  }
+  
+  #categorias {
+    column-count: 3; 
+    font-size: 2.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #titulo {
+    font-size: 2.2rem;
+    padding: 20px;
+    padding-bottom: 20px;
+  }
+  #categorias {
+   
+    border-top:none;
+    display: flex; 
+    flex-wrap: wrap;
+     justify-content: center;
+     gap: 0px;
+  }
+  
+  #mensaje-inicial {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+  
+ .buscar, a {
+      padding-bottom: 10px;
+    font-size: 1.5rem;
+    flex: 1; 
+    text-align: center;
+  }
+ #categorias li {
+  margin: 0;
+   flex-grow: 1;
+  background-color: #191970; 
+  list-style: none; 
+  border:2px solid black;
+  border-bottom: none;
+}
+    #mensaje-inicial {
+    font-size: 1.4rem; 
+    padding: 20px; 
+  }
+
+  .contenido-mensaje {
+    max-width: 70%;
+    font-size: 1rem;
+  }
+
+  #tx_abajo{
+vertical-align: bottom;
+font-size:1rem;
+font-weight:bolder;
+margin:0;
+}
+
+#boton{
+border:none;
+padding:none;
+
+}
+}
 
 </style>
 
@@ -210,10 +298,10 @@ transform: translateY(-5px);
 <h1 id="titulo"> SHERLOCK HOLMES.COM </h1>
 <div id="categorias">
 <li><button class="buscar" onclick="abrirBuscador()" >BUSCAR</span></li>
-<li><a href="PERSONAJES.html"><span>PERSONAJES</span></a></li>
-<li><a href="LIBROS.html"><span>LIBROS</span></a></li>
-<li><a href="ADAPTACIONES.html"><span>ADAPTACIONES</span></a></li>
-<li><a href="BIOGRAFIA.html"><span>BIOGRAFÍA</span></a></li>
+<li><a href="personajes.html"><span>PERSONAJES</span></a></li>
+<li><a href="libros.html"><span>LIBROS</span></a></li>
+<li><a href="adaptaciones.html"><span>ADAPTACIONES</span></a></li>
+<li><a href="biografia.html"><span>BIOGRAFÍA</span></a></li>
 </div>
 
 <div id="ventana-buscador" class="modal">
